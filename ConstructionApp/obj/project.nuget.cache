@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t8g8qGyn5m+V/hiw2DJelBcIj6nXdcEUJVolKjkXCZ5tSI3Ho8TXyKNL2fMj3iiIKiGYmqmMImO8XA9Idw9L+g==",
+  "dgSpecHash": "wVKuHiZMKs5E9YjE4JDl0mJG6/qaXrhHsjSXREKksMkRhDIrVFL4WdpL4eb2yr0/B1/Jyp+NcGXu/z82oNXhgQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\source\\repos\\ConstructionApp\\ConstructionApp.csproj",
+  "projectFilePath": "C:\\Users\\user\\Documents\\GitHub\\ConstructionAppMaui\\ConstructionApp\\ConstructionApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\camera.maui\\1.4.4\\camera.maui.1.4.4.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",

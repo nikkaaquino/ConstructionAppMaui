@@ -8,5 +8,6 @@ namespace MicromaxApi.Services.Interface
     {
         Task<bool> SaveImage(CaptureImageModel model);
         Task<List<ImageResponse>> GetImagesByUser(string userid);
+        Task<List<ImagesResponse>> GetImages(string userid);
     }
 }

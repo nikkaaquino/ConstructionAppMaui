@@ -5,6 +5,7 @@ using MicromaxApi.Services.Dto;
 using MicromaxApi.Services.Implementation;
 using MicromaxApi.Services.Interface;
 using Microsoft.AspNetCore.Mvc;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MicromaxApi.Controllers
 {
@@ -21,7 +22,7 @@ namespace MicromaxApi.Controllers
         }
 
         [HttpGet]
-        [Route("get-list")]
+        [Route("get-images")]
         public async Task<IActionResult> GetImageByUserAsync(string userid)
         {
             if (ModelState.IsValid)
@@ -30,6 +31,32 @@ namespace MicromaxApi.Controllers
                 if (_imageService.IsValid)
                 {
                     var response = new ApiResponse<List<ImageResponse>>
+                    {
+                        Data = result.ToList(),
+                    };
+                    return Ok(response);
+                }
+                else
+                {
+                    return BadRequest(_imageService.Validation);
+                }
+            }
+            else
+            {
+                return BadRequest(new ApiErrorResponse(ModelState));
+            }
+        }
+
+        [HttpGet]
+        [Route("get-list")]
+        public async Task<IActionResult> GetImages(string userid)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _imageService.GetImages(userid);
+                if (_imageService.IsValid)
+                {
+                    var response = new ApiResponse<List<ImagesResponse>>
                     {
                         Data = result.ToList(),
                     };

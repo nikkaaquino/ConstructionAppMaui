@@ -15,6 +15,34 @@ namespace MicromaxApi.Services.Interface
             _repo = repo;
         }
 
+        public async Task<List<ImagesResponse>> GetImages(string userid)
+        {
+            try
+            {
+                var result = await _repo.GetImages(userid);
+
+                var response = result.Select(x => new ImagesResponse
+                {
+                    ImageId = x.ImageId,
+                    ImageName = x.ImageName,
+                    ImageData = x.ImageData,
+                    Location = x.Location,
+                    DateCreated = x.DateCreated,
+                    User = userid
+
+                }).ToList();
+
+                return response;
+
+
+            }
+            catch (Exception ex)
+            {
+                Validation.Add("errors", "Something went wrong");
+                return null;
+            }
+        }
+
         public async Task<List<ImageResponse>> GetImagesByUser(string userid)
         {
             try

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FgaN7PBH3dt8caCWptgouSmqOWoroCLmx/+qcjS7u3TJ/XlP4GaKSEz4r/vR+S21lDkSVOQuD1z7YepHh/g3uw==",
+  "dgSpecHash": "Is6p7EwA7S+Ml8vs1vLo51p1XrmF4bS6SiFNJGzuAvIKnm2Dfl08MtjOHP2YRscwcIgfqyui5SgJT5WSD4zIJA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\source\\repos\\MicromaxApi\\MicromaxApi.csproj",
+  "projectFilePath": "C:\\Users\\user\\Documents\\GitHub\\ConstructionAppMaui\\MicromaxApi\\MicromaxApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\autofac\\7.0.1\\autofac.7.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",

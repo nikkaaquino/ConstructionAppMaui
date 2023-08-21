@@ -9,5 +9,7 @@ namespace MicromaxApi.Data.Repositories.Interface
 
        Task<List<CaptureImageEntity>> GetImageByUser(string userid);
 
+        Task<List<ImageEntity>> GetImages(string userid);
+
     }
 }

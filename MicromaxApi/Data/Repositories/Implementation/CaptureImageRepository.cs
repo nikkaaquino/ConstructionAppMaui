@@ -20,16 +20,36 @@ namespace MicromaxApi.Data.Repositories.Implementation
         {
             try
             {
-                var sql = "select * from tblImageUpload where created_by = @uid";
+                var sql = "select * from tblImageUpload where created_by = @UserId";
 
                 using (var connection = _context.CreateConnection())
                 {
-                    var result = await connection.QueryAsync<CaptureImageEntity>(sql, new { uid = userid });
+                    var result = await connection.QueryAsync<CaptureImageEntity>(sql, new { UserId = userid });
                     return result.ToList();
                 }
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"An error occurred: {ex}");
+                throw;
+            }
+        }
+
+        public async Task<List<ImageEntity>> GetImages(string userid)
+        {
+            try
+            {
+                var sql = "select ImageId, ImageName, ImageData, Location, User, DateCreated from tblImages where [User] = @UserId";
+
+                using (var connection = _context.CreateConnection())
+                {
+                    var result = await connection.QueryAsync<ImageEntity>(sql, new { UserId = userid });
+                    return result.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex}");
                 throw;
             }
         }

@@ -2602,11 +2602,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\MicromaxApi\\MicromaxApi.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\ConstructionAppMaui\\MicromaxApi\\MicromaxApi.csproj",
       "projectName": "MicromaxApi",
-      "projectPath": "C:\\Users\\user\\source\\repos\\MicromaxApi\\MicromaxApi.csproj",
+      "projectPath": "C:\\Users\\user\\Documents\\GitHub\\ConstructionAppMaui\\MicromaxApi\\MicromaxApi.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\MicromaxApi\\obj\\",
+      "outputPath": "C:\\Users\\user\\Documents\\GitHub\\ConstructionAppMaui\\MicromaxApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

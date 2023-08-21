@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\ConstructionApp\\ConstructionApp.csproj": {}
+    "C:\\Users\\user\\Documents\\GitHub\\ConstructionAppMaui\\ConstructionApp\\ConstructionApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\ConstructionApp\\ConstructionApp.csproj": {
+    "C:\\Users\\user\\Documents\\GitHub\\ConstructionAppMaui\\ConstructionApp\\ConstructionApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\ConstructionApp\\ConstructionApp.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\ConstructionAppMaui\\ConstructionApp\\ConstructionApp.csproj",
         "projectName": "ConstructionApp",
-        "projectPath": "C:\\Users\\user\\source\\repos\\ConstructionApp\\ConstructionApp.csproj",
+        "projectPath": "C:\\Users\\user\\Documents\\GitHub\\ConstructionAppMaui\\ConstructionApp\\ConstructionApp.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\ConstructionApp\\obj\\",
+        "outputPath": "C:\\Users\\user\\Documents\\GitHub\\ConstructionAppMaui\\ConstructionApp\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
