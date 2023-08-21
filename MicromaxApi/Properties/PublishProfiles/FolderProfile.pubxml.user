@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\inetpub\wwwroot\loginapi</_PublishTargetUrl>
+    <History>True|2023-05-23T14:29:08.3998336Z;True|2023-05-11T23:04:48.2979340+08:00;False|2023-05-11T23:01:22.4194489+08:00;False|2023-05-11T23:00:49.0843970+08:00;False|2023-05-11T22:58:17.8851267+08:00;False|2023-05-11T22:56:48.2723123+08:00;False|2023-05-11T22:55:30.9134857+08:00;False|2023-05-11T22:54:51.4941172+08:00;True|2023-05-11T22:31:58.9236777+08:00;True|2023-05-11T22:09:15.7875149+08:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
