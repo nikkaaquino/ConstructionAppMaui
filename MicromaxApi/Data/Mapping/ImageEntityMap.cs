@@ -13,6 +13,7 @@ namespace MicromaxApi.Data.Mapping
             this.Map(x => x.DateCreated).ToColumn("DateCreated");
             this.Map(x => x.User).ToColumn("User");
             this.Map(x => x.Location).ToColumn("Location");
+            this.Map(x => x.ImageView).ToColumn("ImageView");
         }
     }
 }

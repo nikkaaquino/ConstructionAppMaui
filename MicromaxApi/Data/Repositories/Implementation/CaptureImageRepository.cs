@@ -39,7 +39,7 @@ namespace MicromaxApi.Data.Repositories.Implementation
         {
             try
             {
-                var sql = "select ImageId, ImageName, ImageData, Location, User, DateCreated from tblImages where [User] = @UserId";
+                var sql = "select ImageId, ImageName, ImageData, Location, User, DateCreated, ImageView from tblImages where [User] = @UserId";
 
                 using (var connection = _context.CreateConnection())
                 {
@@ -73,6 +73,23 @@ namespace MicromaxApi.Data.Repositories.Implementation
             }
         }
 
+        public async Task<bool> SaveImages(ImageEntity entity)
+        {
+            try
+            {
+                var sql = "insert into tblImages (ImageId, ImageName, ImageData, DateCreated, Location, [User], ImageView) values (@imageId, @imageName, @imageData, @dateCreated, @location, @user, @imageView)";
 
+                using (var connection = _context.CreateConnection())
+                {
+                    var count = await connection.ExecuteAsync(sql, entity);
+                    return count > 0;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -27,10 +27,10 @@ namespace MicromaxApi.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await _imageService.GetImagesByUser(userid);
+                var result = await _imageService.GetImages(userid);
                 if (_imageService.IsValid)
                 {
-                    var response = new ApiResponse<List<ImageResponse>>
+                    var response = new ApiResponse<List<ImagesResponse>>
                     {
                         Data = result.ToList(),
                     };
@@ -39,6 +39,33 @@ namespace MicromaxApi.Controllers
                 else
                 {
                     return BadRequest(_imageService.Validation);
+                }
+            }
+            else
+            {
+                return BadRequest(new ApiErrorResponse(ModelState));
+            }
+        }
+
+        [HttpPost]
+        [Route("save-images")]
+        public IActionResult Save([FromBody] ImageModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = _imageService.SaveImages(model);
+                if (!_imageService.IsValid)
+                {
+                    return BadRequest(_imageService.Validation);
+                }
+                else
+                {
+                    var response = new ApiResponse<Task<bool>>
+                    {
+                        Data = result
+                    };
+
+                    return Ok(response);
                 }
             }
             else

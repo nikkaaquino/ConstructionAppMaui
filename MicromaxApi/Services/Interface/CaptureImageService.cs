@@ -28,7 +28,8 @@ namespace MicromaxApi.Services.Interface
                     ImageData = x.ImageData,
                     Location = x.Location,
                     DateCreated = x.DateCreated,
-                    User = userid
+                    User = userid,
+                    ImageView = x.ImageView
 
                 }).ToList();
 
@@ -86,6 +87,39 @@ namespace MicromaxApi.Services.Interface
 
 
                 var isSaved = await this._repo.SaveImage(saveEntity);
+                if (!isSaved)
+                {
+                    this.Validation.Add("errors", "Something went wrong. Please try again in a while");
+                }
+
+                return isSaved;
+            }
+            catch (Exception ex)
+            {
+                this.Validation.Add("errors", "Something went wrong. Please try again in a while");
+                return false;
+            }
+        }
+
+        public async  Task<bool> SaveImages(ImageModel model)
+        {
+            try
+            {
+
+                var saveEntity = new ImageEntity
+                {
+                    ImageId = model.ImageId,
+                    ImageName = model.ImageName,
+                    ImageData = model.ImageData,
+                    Location = model.Location,
+                    User = model.User,
+                    DateCreated = DateTime.Now,
+                    ImageView = model.ImageView
+                    
+                };
+
+
+                var isSaved = await this._repo.SaveImages(saveEntity);
                 if (!isSaved)
                 {
                     this.Validation.Add("errors", "Something went wrong. Please try again in a while");

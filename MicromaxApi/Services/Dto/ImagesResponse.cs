@@ -22,5 +22,8 @@ namespace MicromaxApi.Services.Dto
 
         [JsonProperty]
         public string Location { get; set; }
+
+        [JsonProperty]
+        public byte[] ImageView { get; set; }
     }
 }
