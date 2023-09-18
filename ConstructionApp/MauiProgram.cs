@@ -28,8 +28,10 @@ public static class MauiProgram
         builder.Services.AddSingleton<LoginPage>();
         builder.Services.AddTransient<HomePage>();
 
-		builder.Services.AddTransient<PhotoListPage>();
-		builder.Services.AddTransient<PhotoListViewModel>();
+		builder.Services.AddSingleton<PhotoListPage>();
+		builder.Services.AddSingleton<PhotoListViewModel>();
+        builder.Services.AddTransient<DetailPage>();
+        builder.Services.AddTransient<DetailViewModel>();
 
         return builder.Build();
 	}

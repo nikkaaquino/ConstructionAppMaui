@@ -38,10 +38,10 @@ namespace ConstructionApp.ViewModel
             }
         }
 
-        //[ICommand]
-        //async Task Tap(string s)
-        //{ 
-        //    await Shell.Current.GoToAsync($"{nameof(DetailsPage)}?Text={s}");
-        //}
+        [ICommand]
+        async Task Tap(string s)
+        {
+            await Shell.Current.GoToAsync($"{nameof(DetailPage)}?Text={s}");
+        }
     }
 }
