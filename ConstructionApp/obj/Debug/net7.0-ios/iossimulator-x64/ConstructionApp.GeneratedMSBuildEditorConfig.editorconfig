@@ -40,11 +40,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = ConstructionApp.Pages.Home
 build_metadata.AdditionalFiles.TargetPath = Pages\HomePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\HomePage.xaml
 
-[C:/Users/user/Documents/GitHub/ConstructionAppMaui/ConstructionApp/Pages/SavePhoto.xaml]
+[C:/Users/user/Documents/GitHub/ConstructionAppMaui/ConstructionApp/Pages/PhotoListPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ConstructionApp.Pages.SavePhoto.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\SavePhoto.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\SavePhoto.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ConstructionApp.Pages.PhotoListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\PhotoListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\PhotoListPage.xaml
 
 [C:/Users/user/Documents/GitHub/ConstructionAppMaui/ConstructionApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

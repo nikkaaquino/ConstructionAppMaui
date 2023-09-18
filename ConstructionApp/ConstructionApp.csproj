@@ -52,6 +52,7 @@
 		<PackageReference Include="Camera.MAUI" Version="1.4.4">
 		  <TreatAsUsed>true</TreatAsUsed>
 		</PackageReference>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0">
 		  <TreatAsUsed>true</TreatAsUsed>
 		</PackageReference>
@@ -73,7 +74,7 @@
 	  <MauiXaml Update="Pages\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\SavePhoto.xaml">
+	  <MauiXaml Update="Pages\PhotoListPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

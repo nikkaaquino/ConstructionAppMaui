@@ -4,6 +4,7 @@ using ConstructionApp.DataServices.Interface;
 using ConstructionApp.Pages;
 using ConstructionApp.Services.Implementation;
 using ConstructionApp.Services.Interface;
+using ConstructionApp.ViewModel;
 using Microsoft.Extensions.Logging;
 
 namespace ConstructionApp;
@@ -26,7 +27,10 @@ public static class MauiProgram
         builder.Services.AddSingleton<IImageDataService, ImageDataService>();
         builder.Services.AddSingleton<LoginPage>();
         builder.Services.AddTransient<HomePage>();
-        builder.Services.AddTransient<SavePhoto>();
+
+		builder.Services.AddTransient<PhotoListPage>();
+		builder.Services.AddTransient<PhotoListViewModel>();
+
         return builder.Build();
 	}
 }

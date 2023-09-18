@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
              x:Class="ConstructionApp.Pages.HomePage"
-             NavigationPage.HasBackButton="false"
              Title="HomePage">
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="View Captured Photos" Clicked="OnPhotoListClicked"/>
+    </ContentPage.ToolbarItems>
 
     <ScrollView>
 

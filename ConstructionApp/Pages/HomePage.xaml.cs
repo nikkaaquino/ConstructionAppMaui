@@ -1,5 +1,6 @@
 using ConstructionApp.Model;
 using ConstructionApp.Services.Interface;
+using ConstructionApp.ViewModel;
 using Microsoft.Maui.Controls;
 using System.Diagnostics;
 
@@ -68,4 +69,8 @@ public partial class HomePage : ContentPage
         myImage.Source = cameraView.GetSnapShot(Camera.MAUI.ImageFormat.JPEG);
     }
 
+    private async void OnPhotoListClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new PhotoListPage());
+    }
 }
