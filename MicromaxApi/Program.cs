@@ -7,7 +7,7 @@ using MicromaxApi.Services.Interface;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddSingleton<DapperContext>();
+builder.Services.AddSingleton<DapperContext>(); 
 builder.Services.AddScoped<ILoginRepository, LoginRepository>();
 builder.Services.AddScoped<ILoginService, LoginService>();
 

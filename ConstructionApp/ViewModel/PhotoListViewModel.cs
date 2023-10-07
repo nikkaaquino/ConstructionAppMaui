@@ -1,16 +1,16 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using ConstructionApp.Pages;
 using Microsoft.Toolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 
 namespace ConstructionApp.ViewModel
-{
+{   
     public partial class PhotoListViewModel : ObservableObject
-    {
-        public PhotoListViewModel() 
+    {       
+        public PhotoListViewModel()
         {
             Items = new ObservableCollection<string>();
-        
         }
 
         [ObservableProperty]
@@ -19,17 +19,23 @@ namespace ConstructionApp.ViewModel
         [ObservableProperty]
         string text;
 
-        [ICommand]
-        void Add()
+        [RelayCommand]
+        async Task Add()
         {
             if (string.IsNullOrEmpty(Text))
                 return;
+
+            if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
+            {
+                await Shell.Current.DisplayAlert("Uh Oh", "No Internet Connection", "Ok");
+                return;
+            }
 
             Items.Add(Text);
             Text = string.Empty;
         }
 
-        [ICommand]
+        [RelayCommand]
         void Delete(string s)
         {
             if (Items.Contains(s))
@@ -38,7 +44,7 @@ namespace ConstructionApp.ViewModel
             }
         }
 
-        [ICommand]
+        [RelayCommand]
         async Task Tap(string s)
         {
             await Shell.Current.GoToAsync($"{nameof(DetailPage)}?Text={s}");

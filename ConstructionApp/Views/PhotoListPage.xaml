@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConstructionApp.Pages.PhotoListPage"
+             Title="PhotoListPage"
+             xmlns:viewmodel="clr-namespace:ConstructionApp.ViewModel"
+             x:DataType="viewmodel:PhotoListViewModel">
+
+
+    <Grid RowDefinitions="100, Auto, *"
+          ColumnDefinitions=".75*, .25*"
+          Padding="10"
+          RowSpacing="10"
+          ColumnSpacing="10">
+
+        <Image Grid.ColumnSpan="2" Source="logo.png"/>
+        <Label x:Name="txtUserName" Text="{Binding User}"/>
+        <Entry Placeholder="Search" Grid.Row="1" Text="{Binding Text}"/>
+        <Button Text="Add" Grid.Row="1" Grid.Column="1" Command="{Binding AddCommand}"/>
+
+        <CollectionView x:Name="collectionView"
+                    SelectionMode="Single"
+                    SelectionChanged="OnSelectionChange"
+                    Margin="30">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="20"/>
+
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Text}" FontSize="Medium"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+</ContentPage>

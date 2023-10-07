@@ -38,24 +38,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = ConstructionApp.MainPage.x
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[C:/Users/user/Documents/GitHub/ConstructionAppMaui/ConstructionApp/Pages/DetailPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ConstructionApp.Pages.DetailPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\DetailPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\DetailPage.xaml
-
-[C:/Users/user/Documents/GitHub/ConstructionAppMaui/ConstructionApp/Pages/HomePage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ConstructionApp.Pages.HomePage.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\HomePage.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\HomePage.xaml
-
-[C:/Users/user/Documents/GitHub/ConstructionAppMaui/ConstructionApp/Pages/PhotoListPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = ConstructionApp.Pages.PhotoListPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\PhotoListPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\PhotoListPage.xaml
-
 [C:/Users/user/Documents/GitHub/ConstructionAppMaui/ConstructionApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ConstructionApp.Resources.Styles.Colors.xaml
@@ -67,3 +49,21 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = ConstructionApp.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/user/Documents/GitHub/ConstructionAppMaui/ConstructionApp/Views/DetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ConstructionApp.Views.DetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\DetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\DetailPage.xaml
+
+[C:/Users/user/Documents/GitHub/ConstructionAppMaui/ConstructionApp/Views/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ConstructionApp.Views.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\HomePage.xaml
+
+[C:/Users/user/Documents/GitHub/ConstructionAppMaui/ConstructionApp/Views/PhotoListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ConstructionApp.Views.PhotoListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\PhotoListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\PhotoListPage.xaml

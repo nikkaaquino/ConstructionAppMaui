@@ -260,7 +260,6 @@ C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\iossimulator-x64\libxamarin-dotnet-debug.dylib
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\iossimulator-x64\libxamarin-dotnet.a
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\iossimulator-x64\libxamarin-dotnet.dylib
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-ios\iossimulator-x64\build-signature\signature
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-ios\iossimulator-x64\mauiimage.inputs
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-ios\iossimulator-x64\mauifont.inputs
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-ios\iossimulator-x64\mauisplash.inputs
@@ -314,3 +313,4 @@ C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\f\OpenSans-Regular.ttf
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\f\OpenSans-Semibold.ttf
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-ios\iossimulator-x64\resizetizer\f\Sitka.ttc
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-ios\iossimulator-x64\build-signature\signature

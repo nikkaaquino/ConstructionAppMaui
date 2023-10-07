@@ -9,7 +9,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace MicromaxApi.Controllers
 {
-    [Route("api/capture-image")]
+    [Route("api/image")]
     [ApiController]
 
     public class CaptureImageController : ControllerBase
@@ -22,7 +22,7 @@ namespace MicromaxApi.Controllers
         }
 
         [HttpGet]
-        [Route("get-images")]
+        [Route("image-list")]
         public async Task<IActionResult> GetImageByUserAsync(string userid)
         {
             if (ModelState.IsValid)
@@ -48,7 +48,7 @@ namespace MicromaxApi.Controllers
         }
 
         [HttpPost]
-        [Route("save-images")]
+        [Route("image")]
         public IActionResult Save([FromBody] ImageModel model)
         {
             if (ModelState.IsValid)

@@ -1,1 +1,0 @@
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\ConstructionApp.csproj;x64

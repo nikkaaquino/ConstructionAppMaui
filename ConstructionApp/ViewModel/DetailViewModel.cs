@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Microsoft.Toolkit.Mvvm.Input;
 
 namespace ConstructionApp.ViewModel
@@ -10,7 +11,7 @@ namespace ConstructionApp.ViewModel
         [ObservableProperty]
         string text;
 
-        [ICommand]
+        [RelayCommand]
         async Task GoBack()
         {
             await Shell.Current.GoToAsync("..");
