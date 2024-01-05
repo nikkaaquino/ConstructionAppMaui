@@ -1,67 +1,32 @@
-﻿using ConstructionApp.Model;
+﻿
 using ConstructionApp.Services.Interface;
-using System.Diagnostics;
-using System.Text.Json;
+using System.Net.Http.Json;
 
 namespace ConstructionApp.Services.Implementation
 {
-    public class PhotoDataService : IPhotoDataService
+    public class PhotoDataService
     {
-        private readonly HttpClient _httpClient;
-        private readonly string _baseAddress;
-        private readonly string _url;
-        private readonly JsonSerializerOptions _jsonSerializeOptions;
+        HttpClient httpClient;
 
         public PhotoDataService()
         {
-            _httpClient = new HttpClient();
-            _httpClient.Timeout = TimeSpan.FromSeconds(300);
-            _baseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5003" : "http://localhost:5003";
-            _url = $"{_baseAddress}/api/image";
-
-            _jsonSerializeOptions = new JsonSerializerOptions
-            {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-            };
-        }
-        public Task AddPhotoAsync(PhotoModel model)
-        {
-            throw new NotImplementedException();
+            this.httpClient = new HttpClient();
         }
 
-        public Task DeletePhotoAsync(int id)
+        List<PhotoModel> photos;
+
+        public async Task<List<PhotoModel>> GetPhotos()
         {
-            throw new NotImplementedException();
-        }
-
-        public async Task<List<PhotoModel>> GetAllPhotosAsync(string username)
-        {
-            List<PhotoModel> photo = new List<PhotoModel>();
-            if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
+            if (photos?.Count > 0)
+                return photos;
+            var username = "mmaquino";
+            var response = await httpClient.GetAsync($"http://localhost:5003/api/image/image-list?username={username}");
+            if (response.IsSuccessStatusCode)
             {
-                Debug.WriteLine("----> No Internet Access ....");
-                return photo;
-            }
-            try
-            {
-                HttpResponseMessage response = await _httpClient.GetAsync($"{_url}/image-list?username={username}");
-                if (response.IsSuccessStatusCode)
-                {
-                    string content = await response.Content.ReadAsStringAsync();
-                    photo = JsonSerializer.Deserialize<List<PhotoModel>>(content, _jsonSerializeOptions);
-                }
-                else
-                {
-                    Debug.WriteLine("---> Non Http 2xx response");
-                }
-
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Oops exception: {ex.Message}");
+                photos = await response.Content.ReadFromJsonAsync(PhotoModelContext.Default.ListPhotoModel);
             }
 
-            return photo;
+            return photos;
         }
     }
 }

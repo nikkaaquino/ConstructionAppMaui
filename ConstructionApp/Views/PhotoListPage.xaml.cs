@@ -6,18 +6,10 @@ namespace ConstructionApp.Pages;
 
 public partial class PhotoListPage : ContentPage
 {
-	private readonly IPhotoDataService _photoDataService;
-	public PhotoListPage(IPhotoDataService photoDataService)
+    private readonly PhotoListViewModel _viewModel;
+	public PhotoListPage(PhotoListViewModel viewModel)
 	{
 		InitializeComponent();
-        _photoDataService = photoDataService;
-        BindingContext = new PhotoListViewModel();
+        BindingContext = viewModel;
 	}
-
-    protected async override void OnAppearing() 
-    {
-        base.OnAppearing();
-        string userName = txtUserName.Text;
-        collectionView.ItemsSource = await _photoDataService.GetAllPhotosAsync();
-    }
 }

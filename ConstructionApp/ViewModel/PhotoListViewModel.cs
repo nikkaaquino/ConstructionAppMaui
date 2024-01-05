@@ -1,53 +1,71 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using ConstructionApp.Pages;
-using Microsoft.Toolkit.Mvvm.Input;
-using System.Collections.ObjectModel;
+﻿using ConstructionApp.Services.Implementation;
 
 namespace ConstructionApp.ViewModel
-{   
-    public partial class PhotoListViewModel : ObservableObject
-    {       
-        public PhotoListViewModel()
+{
+    public partial class PhotoListViewModel : BaseViewModel
+    {
+        public ObservableCollection<PhotoModel> Photos { get; } = new();
+        PhotoDataService photoDataService;
+        IConnectivity connectivity;
+
+        public PhotoListViewModel(PhotoDataService photoDataService, IConnectivity connectivity)
         {
-            Items = new ObservableCollection<string>();
+            Title = "Construction Appliction";
+            this.photoDataService = photoDataService;
+            this.connectivity = connectivity;
+        }
+
+        [RelayCommand]
+        async Task GoToDetails(PhotoModel photos)
+        {
+            if (photos == null)
+                return;
+
+        await Shell.Current.GoToAsync(nameof(DetailPage), true, new Dictionary<string, object>
+        {
+            {"Photos", photos }
+        });
         }
 
         [ObservableProperty]
-        ObservableCollection<string> items;
-
-        [ObservableProperty]
-        string text;
+        bool isRefreshing;
 
         [RelayCommand]
-        async Task Add()
+        async Task GetPhotosAsync()
         {
-            if (string.IsNullOrEmpty(Text))
+            if (IsBusy)
                 return;
 
-            if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
+            try
             {
-                await Shell.Current.DisplayAlert("Uh Oh", "No Internet Connection", "Ok");
-                return;
+                if(connectivity.NetworkAccess != NetworkAccess.Internet)
+                {
+                    await Shell.Current.DisplayAlert("No connectivity!", 
+                        $"Please check internet and try again", "OK");
+                    return;
+                }
+                IsBusy = true;
+                var photos = await photoDataService.GetPhotos();
+
+                if (Photos.Count != 0)
+                    Photos.Clear();
+
+                foreach(var photo in photos)
+                    Photos.Add(photo);
+
+            }
+            catch (Exception ex) 
+            {
+                Debug.WriteLine($"Unable to get monkeys: {ex.Message}");
+                await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+            }
+            finally
+            {
+                IsBusy = false;
+                IsRefreshing = false;
             }
 
-            Items.Add(Text);
-            Text = string.Empty;
         }
-
-        [RelayCommand]
-        void Delete(string s)
-        {
-            if (Items.Contains(s))
-            {
-                Items.Remove(s);
-            }
-        }
-
-        [RelayCommand]
-        async Task Tap(string s)
-        {
-            await Shell.Current.GoToAsync($"{nameof(DetailPage)}?Text={s}");
-        }
+        
     }
 }

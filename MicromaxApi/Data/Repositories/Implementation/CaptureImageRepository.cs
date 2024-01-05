@@ -39,7 +39,7 @@ namespace MicromaxApi.Data.Repositories.Implementation
         {
             try
             {
-                var sql = "select ImageId, ImageName, ImageData, Location, User, DateCreated, ImageView from tblImages where [User] = @UserId";
+                var sql = "select ImageId, ImageName, ImageData, Location, User, DateCreated, ImageView, ImageType from tblImages where [User] = @UserId";
 
                 using (var connection = _context.CreateConnection())
                 {
@@ -77,7 +77,7 @@ namespace MicromaxApi.Data.Repositories.Implementation
         {
             try
             {
-                var sql = "insert into tblImages (ImageId, ImageName, ImageData, DateCreated, Location, [User], ImageView) values (@imageId, @imageName, @imageData, @dateCreated, @location, @user, @imageView)";
+                var sql = "insert into tblImages (ImageId, ImageName, ImageData, DateCreated, Location, [User], ImageView, ImageType) values (@imageId, @imageName, @imageData, @dateCreated, @location, @user, @imageView, @imageType)";
 
                 using (var connection = _context.CreateConnection())
                 {

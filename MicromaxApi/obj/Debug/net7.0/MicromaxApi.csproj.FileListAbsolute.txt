@@ -140,3 +140,9 @@ C:\Users\user\Documents\GitHub\ConstructionAppMaui\MicromaxApi\obj\Debug\net7.0\
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\MicromaxApi\obj\Debug\net7.0\MicromaxApi.pdb
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\MicromaxApi\obj\Debug\net7.0\MicromaxApi.genruntimeconfig.cache
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\MicromaxApi\obj\Debug\net7.0\ref\MicromaxApi.dll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\MicromaxApi\bin\Debug\net7.0\CommunityToolkit.Mvvm.dll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\MicromaxApi\obj\Debug\net7.0\MicromaxApi.sourcelink.json
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\MicromaxApi\bin\Debug\net7.0\BouncyCastle.Crypto.dll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\MicromaxApi\bin\Debug\net7.0\Serilog.dll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\MicromaxApi\bin\Debug\net7.0\Serilog.Sinks.Console.dll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\MicromaxApi\bin\Debug\net7.0\Serilog.Sinks.File.dll

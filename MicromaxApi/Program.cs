@@ -3,8 +3,16 @@ using MicromaxApi.Data.Repositories.Implementation;
 using MicromaxApi.Data.Repositories.Interface;
 using MicromaxApi.Services.Implementation;
 using MicromaxApi.Services.Interface;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configure logging
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .WriteTo.Console()  // Log to console
+    .WriteTo.File("logs/myapp-.txt", rollingInterval: RollingInterval.Day)  // Log to file
+    .CreateLogger();
 
 // Add services to the container.
 builder.Services.AddSingleton<DapperContext>(); 

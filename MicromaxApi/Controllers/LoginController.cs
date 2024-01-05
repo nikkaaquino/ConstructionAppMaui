@@ -18,6 +18,27 @@ namespace MicromaxApi.Controllers
             _loginService = loginService;
         }
 
+        [HttpGet("AuthenticateUser")]
+        public async Task<IActionResult> AuthorizeUserAsync([FromQuery] LoginModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _loginService.LoginAsync(model);
+                if (_loginService.IsValid)
+                {
+                    return Ok(result);
+                }
+                else
+                {
+                    return BadRequest(_loginService.Validation);
+                }
+            }
+            else
+            {
+                return BadRequest(new ApiErrorResponse(ModelState));
+            }
+        }
+
         [HttpGet]
         [Route("LoginUser")]
         public async Task<IActionResult> LoginUserAsync(string username, string password)

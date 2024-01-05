@@ -3,6 +3,9 @@ using MicromaxApi.Data.Repositories.Interface;
 using MicromaxApi.Model;
 using MicromaxApi.Services.Config;
 using MicromaxApi.Services.Dto;
+using System.Runtime.InteropServices;
+using System.Text;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MicromaxApi.Services.Interface
 {
@@ -21,6 +24,7 @@ namespace MicromaxApi.Services.Interface
             {
                 var result = await _repo.GetImages(userid);
 
+
                 var response = result.Select(x => new ImagesResponse
                 {
                     ImageId = x.ImageId,
@@ -29,7 +33,9 @@ namespace MicromaxApi.Services.Interface
                     Location = x.Location,
                     DateCreated = x.DateCreated,
                     User = userid,
-                    ImageView = x.ImageView
+                    //ImageView = x.ImageView,
+                    ImageType =  x.ImageType,
+                    ImageUrl = "data:image/" + x.ImageType + ";base64," + Convert.ToBase64String(x.ImageView)
 
                 }).ToList();
 
@@ -114,7 +120,8 @@ namespace MicromaxApi.Services.Interface
                     Location = model.Location,
                     User = model.User,
                     DateCreated = DateTime.Now,
-                    ImageView = model.ImageView
+                    ImageView = model.ImageView,
+                    ImageType = model.ImageType,
                     
                 };
 

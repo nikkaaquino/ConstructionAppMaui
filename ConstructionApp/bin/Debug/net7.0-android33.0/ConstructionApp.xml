@@ -4,6 +4,98 @@
         <name>ConstructionApp</name>
     </assembly>
     <members>
+        <member name="P:ConstructionApp.Model.MonkeyContext.String">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ConstructionApp.Model.MonkeyContext.Int32">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ConstructionApp.Model.MonkeyContext.Double">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ConstructionApp.Model.MonkeyContext.Monkey">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ConstructionApp.Model.MonkeyContext.ListMonkey">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ConstructionApp.Model.MonkeyContext.Default">
+            <summary>
+            The default <see cref="T:System.Text.Json.Serialization.JsonSerializerContext"/> associated with a default <see cref="T:System.Text.Json.JsonSerializerOptions"/> instance.
+            </summary>
+        </member>
+        <member name="P:ConstructionApp.Model.MonkeyContext.GeneratedSerializerOptions">
+            <summary>
+            The source-generated options associated with this context.
+            </summary>
+        </member>
+        <member name="M:ConstructionApp.Model.MonkeyContext.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="M:ConstructionApp.Model.MonkeyContext.#ctor(System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ConstructionApp.Model.MonkeyContext.GetTypeInfo(System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="P:ConstructionApp.Model.PhotoModelContext.Int32">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ConstructionApp.Model.PhotoModelContext.String">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ConstructionApp.Model.PhotoModelContext.PhotoModel">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ConstructionApp.Model.PhotoModelContext.ListPhotoModel">
+            <summary>
+            Defines the source generated JSON serialization contract metadata for a given type.
+            </summary>
+        </member>
+        <member name="P:ConstructionApp.Model.PhotoModelContext.Default">
+            <summary>
+            The default <see cref="T:System.Text.Json.Serialization.JsonSerializerContext"/> associated with a default <see cref="T:System.Text.Json.JsonSerializerOptions"/> instance.
+            </summary>
+        </member>
+        <member name="P:ConstructionApp.Model.PhotoModelContext.GeneratedSerializerOptions">
+            <summary>
+            The source-generated options associated with this context.
+            </summary>
+        </member>
+        <member name="M:ConstructionApp.Model.PhotoModelContext.#ctor">
+            <inheritdoc/>
+        </member>
+        <member name="M:ConstructionApp.Model.PhotoModelContext.#ctor(System.Text.Json.JsonSerializerOptions)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ConstructionApp.Model.PhotoModelContext.GetTypeInfo(System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="T:ConstructionApp.ViewModel.BaseViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.BaseViewModel.isBusy"/>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.BaseViewModel.Title">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.BaseViewModel.title"/>
+        </member>
         <member name="T:ConstructionApp.ViewModel.DetailViewModel">
             <inheritdoc/>
             <inheritdoc/>
@@ -17,35 +109,61 @@
         <member name="P:ConstructionApp.ViewModel.DetailViewModel.GoBackCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.DetailViewModel.GoBack"/>.</summary>
         </member>
+        <member name="T:ConstructionApp.ViewModel.HomeViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="F:ConstructionApp.ViewModel.HomeViewModel.tapCommand">
+            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.HomeViewModel.TapCommand"/>.</summary>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.TapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.HomeViewModel.Tap"/>.</summary>
+        </member>
+        <member name="T:ConstructionApp.ViewModel.MonkeysViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.MonkeysViewModel.IsRefreshing">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.MonkeysViewModel.isRefreshing"/>
+        </member>
+        <member name="F:ConstructionApp.ViewModel.MonkeysViewModel.goToDetailsCommand">
+            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.MonkeysViewModel.GoToDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.MonkeysViewModel.GoToDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.MonkeysViewModel.GoToDetails(ConstructionApp.Model.Monkey)"/>.</summary>
+        </member>
+        <member name="F:ConstructionApp.ViewModel.MonkeysViewModel.getMonkeysCommand">
+            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.MonkeysViewModel.GetMonkeysCommand"/>.</summary>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.MonkeysViewModel.GetMonkeysCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.MonkeysViewModel.GetMonkeysAsync"/>.</summary>
+        </member>
+        <member name="F:ConstructionApp.ViewModel.MonkeysViewModel.getClosestMonkeyCommand">
+            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.MonkeysViewModel.GetClosestMonkeyCommand"/>.</summary>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.MonkeysViewModel.GetClosestMonkeyCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.MonkeysViewModel.GetClosestMonkey"/>.</summary>
+        </member>
         <member name="T:ConstructionApp.ViewModel.PhotoListViewModel">
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
-            <inheritdoc/>
         </member>
-        <member name="P:ConstructionApp.ViewModel.PhotoListViewModel.Items">
-            <inheritdoc cref="F:ConstructionApp.ViewModel.PhotoListViewModel.items"/>
+        <member name="P:ConstructionApp.ViewModel.PhotoListViewModel.IsRefreshing">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.PhotoListViewModel.isRefreshing"/>
         </member>
-        <member name="P:ConstructionApp.ViewModel.PhotoListViewModel.Text">
-            <inheritdoc cref="F:ConstructionApp.ViewModel.PhotoListViewModel.text"/>
+        <member name="F:ConstructionApp.ViewModel.PhotoListViewModel.goToDetailsCommand">
+            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.PhotoListViewModel.GoToDetailsCommand"/>.</summary>
         </member>
-        <member name="F:ConstructionApp.ViewModel.PhotoListViewModel.addCommand">
-            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.PhotoListViewModel.AddCommand"/>.</summary>
+        <member name="P:ConstructionApp.ViewModel.PhotoListViewModel.GoToDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.PhotoListViewModel.GoToDetails(ConstructionApp.Model.PhotoModel)"/>.</summary>
         </member>
-        <member name="P:ConstructionApp.ViewModel.PhotoListViewModel.AddCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.PhotoListViewModel.Add"/>.</summary>
+        <member name="F:ConstructionApp.ViewModel.PhotoListViewModel.getPhotosCommand">
+            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.PhotoListViewModel.GetPhotosCommand"/>.</summary>
         </member>
-        <member name="F:ConstructionApp.ViewModel.PhotoListViewModel.deleteCommand">
-            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.PhotoListViewModel.DeleteCommand"/>.</summary>
-        </member>
-        <member name="P:ConstructionApp.ViewModel.PhotoListViewModel.DeleteCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.PhotoListViewModel.Delete(System.String)"/>.</summary>
-        </member>
-        <member name="F:ConstructionApp.ViewModel.PhotoListViewModel.tapCommand">
-            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.PhotoListViewModel.TapCommand"/>.</summary>
-        </member>
-        <member name="P:ConstructionApp.ViewModel.PhotoListViewModel.TapCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.PhotoListViewModel.Tap(System.String)"/>.</summary>
+        <member name="P:ConstructionApp.ViewModel.PhotoListViewModel.GetPhotosCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.PhotoListViewModel.GetPhotosAsync"/>.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
             <summary>
@@ -53,11 +171,17 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Text">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Text" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Items">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Items" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsRefreshing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
@@ -65,11 +189,20 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsNotBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsNotBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Text">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Text" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Items">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Items" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsRefreshing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
         </member>
     </members>
 </doc>

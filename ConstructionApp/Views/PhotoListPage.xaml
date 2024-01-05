@@ -3,37 +3,98 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ConstructionApp.Pages.PhotoListPage"
              Title="PhotoListPage"
+             xmlns:model="clr-namespace:ConstructionApp.Model"
              xmlns:viewmodel="clr-namespace:ConstructionApp.ViewModel"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="True"
              x:DataType="viewmodel:PhotoListViewModel">
+    <Grid
+        ColumnDefinitions="*,*"
+        ColumnSpacing="5"
+        RowDefinitions="*,Auto"
+        RowSpacing="0"
+        BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
+        <RefreshView
+            Grid.ColumnSpan="2"
+            Command="{Binding GetPhotosCommand}"
+            IsRefreshing="{Binding IsRefreshing}">
+            <ContentView>
+                <CollectionView
+                        ItemsSource="{Binding Photos}"
+                        SelectionMode="None">
+                    <CollectionView.EmptyView>
+                        <StackLayout Padding="100">
+                            <Image
+                                    HorizontalOptions="Center"
+                                    HeightRequest="160"
+                                    WidthRequest="160"
+                                    Source="nodata.png"
+                                    VerticalOptions="Center" />
+                        </StackLayout>
+                    </CollectionView.EmptyView>
+                    <!--<CollectionView.ItemsLayout>
+                            <GridItemsLayout  Orientation="Horizontal" Span="3"/>
+                        </CollectionView.ItemsLayout>-->
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="model:PhotoModel">
+                            <Grid Padding="10" HorizontalOptions="Fill">
+                                <Frame HeightRequest="125" Style="{StaticResource CardView}">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer 
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:PhotoListViewModel}}, Path=GoToDetailsCommand}"
+                                                CommandParameter="{Binding .}"/>
+                                    </Frame.GestureRecognizers>
+                                    <Grid Padding="0" ColumnDefinitions="125,*">
+                                        <!--<Image
+                                                Aspect="AspectFill"
+                                                HeightRequest="125"
+                                                Source="{Binding ImageUrl}"
+                                                WidthRequest="125" />-->
+                                        <VerticalStackLayout
+                                                VerticalOptions="Center"
+                                                Grid.Column="1"
+                                                Padding="10">
+                                            <Label Style="{StaticResource LargeLabel}" Text="{Binding ImageName}" />
+                                            <!--<Label Style="{StaticResource MediumLabel}" Text="{Binding Location}" />-->
+                                        </VerticalStackLayout>
+                                    </Grid>
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ContentView>
+        </RefreshView>
+
+        <Button
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="8"
+            Command="{Binding GetPhotosCommand}"
+            IsEnabled="{Binding IsNotBusy}"
+            Style="{StaticResource ButtonOutline}"
+            Text="Get Photos" />
+
+        <!--  Add this  -->
+        <!--<Button
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="8"
+            Command="{Binding GetClosestMonkeyCommand}"
+            IsEnabled="{Binding IsNotBusy}"
+            Style="{StaticResource ButtonOutline}"
+            Text="Find Closest" />-->
 
 
-    <Grid RowDefinitions="100, Auto, *"
-          ColumnDefinitions=".75*, .25*"
-          Padding="10"
-          RowSpacing="10"
-          ColumnSpacing="10">
-
-        <Image Grid.ColumnSpan="2" Source="logo.png"/>
-        <Label x:Name="txtUserName" Text="{Binding User}"/>
-        <Entry Placeholder="Search" Grid.Row="1" Text="{Binding Text}"/>
-        <Button Text="Add" Grid.Row="1" Grid.Column="1" Command="{Binding AddCommand}"/>
-
-        <CollectionView x:Name="collectionView"
-                    SelectionMode="Single"
-                    SelectionChanged="OnSelectionChange"
-                    Margin="30">
-
-            <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical" ItemSpacing="20"/>
-
-            </CollectionView.ItemsLayout>
-
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Label Text="{Binding Text}" FontSize="Medium"/>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-
+        <ActivityIndicator
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Fill"
+            IsRunning="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            Color="{StaticResource Primary}"
+            VerticalOptions="Center" />
     </Grid>
+
+
 </ContentPage>
