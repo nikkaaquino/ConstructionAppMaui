@@ -1,6 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using ConstructionApp.Pages;
+﻿using ConstructionApp.Views;
 using Microsoft.Toolkit.Mvvm.Input;
 
 namespace ConstructionApp.ViewModel
@@ -10,8 +8,7 @@ namespace ConstructionApp.ViewModel
         [RelayCommand]
         async Task Tap()
         {
-            //await Shell.Current.GoToAsync($"{nameof(PhotoListPage)}");
-            await Shell.Current.GoToAsync($"{nameof(MainPage)}");
+            await Shell.Current.GoToAsync($"{nameof(LoginPage)}");
         }
     }
 }

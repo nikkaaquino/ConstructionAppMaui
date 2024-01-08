@@ -31,6 +31,7 @@ namespace MicromaxApi.Data.Repositories.Implementation
             catch (Exception ex)
             {
                 throw ex;
+                return null;
             }
         }
 

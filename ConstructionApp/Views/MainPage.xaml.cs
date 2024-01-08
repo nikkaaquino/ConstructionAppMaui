@@ -1,10 +1,9 @@
-namespace ConstructionApp.ViewModel;
+namespace ConstructionApp.Views;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage(MonkeysViewModel viewModel)
+	public MainPage()
 	{
 		InitializeComponent();
-        BindingContext = viewModel;
-    }
+	}
 }

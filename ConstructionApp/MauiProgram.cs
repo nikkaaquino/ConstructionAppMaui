@@ -29,16 +29,6 @@ public static class MauiProgram
         builder.Services.AddSingleton<PhotoDataService>();
         builder.Services.AddSingleton<LoginPage>();
         builder.Services.AddSingleton<HomePage>();
-        builder.Services.AddSingleton<PhotoListPage>();
-        builder.Services.AddSingleton<PhotoListPage>();
-        builder.Services.AddSingleton<PhotoListViewModel>();
-
-        builder.Services.AddSingleton<MonkeyService>();
-        builder.Services.AddSingleton<MonkeysViewModel>();
-        builder.Services.AddSingleton<MainPage>();
-
-        builder.Services.AddTransient<DetailPage>();
-        builder.Services.AddTransient<DetailViewModel>();
 
         return builder.Build();
     }

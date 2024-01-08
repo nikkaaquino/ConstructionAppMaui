@@ -70,12 +70,12 @@ namespace MicromaxApi.Services.Implementation
         {
             try
             {
-                var user = await _loginRepo.GetById(model.UserId);
+                var user = await _loginRepo.GetById(model.UserId.ToUpper());
                 byte[] key = Encoding.UTF8.GetBytes("password");
-                byte[] encrypted = RC4Encrypt(model.Password, key);
+                byte[] encrypted = RC4Encrypt(model.Password.ToUpper(), key);
                 string convertedPassword = BitConverter.ToString(encrypted).Replace("-", "");
 
-                if (user.UserId.IsNullOrEmpty())
+                if (user == null)
                 {
                     Validation.Add("errors", $"No user found with ID: {model.UserId}");
                     Log.Warning("$No user found with ID: {model.UserId}");

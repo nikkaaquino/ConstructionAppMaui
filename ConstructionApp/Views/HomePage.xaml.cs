@@ -1,3 +1,5 @@
+using ConstructionApp.Views;
+
 namespace ConstructionApp.Pages;
 
 
@@ -32,5 +34,11 @@ public partial class HomePage : ContentPage
     private async void OnPhotoListClicked(object sender, EventArgs e)
     {
         await Shell.Current.GoToAsync($"{nameof(MainPage)}");
+    }
+
+    //fix logout
+    private async void LogutClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync($"{nameof(LoginPage)}");
     }
 }

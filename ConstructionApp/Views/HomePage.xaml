@@ -20,7 +20,7 @@
         VerticalOptions="Fill"
         HorizontalOptions="Fill">
 
-            <Button Text="Open Camera" Clicked="Button_Clicked"/>
+            <Button Margin="20" Text="Open Camera" Clicked="Button_Clicked"/>
 
             <Image  x:Name="myImage" WidthRequest="200" HeightRequest="200"/>
 
