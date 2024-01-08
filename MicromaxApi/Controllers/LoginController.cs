@@ -1,7 +1,5 @@
 ﻿using api.motorstar.Services.ApiDto;
-using MicromaxApi.Data.Repositories.Interface;
 using MicromaxApi.Model;
-using MicromaxApi.Services.Dto;
 using MicromaxApi.Services.Interface;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,13 +16,12 @@ namespace MicromaxApi.Controllers
             _loginService = loginService;
         }
 
-        [HttpGet]
-        [Route("LoginUser")]
-        public async Task<IActionResult> LoginUserAsync(string username, string password)
+        [HttpGet("AuthenticateUser")]
+        public async Task<IActionResult> AuthorizeUserAsync([FromQuery] LoginModel model)
         {
             if (ModelState.IsValid)
             {
-                var result = await _loginService.LoginAsync(username, password);
+                var result = await _loginService.LoginAsync(model);
                 if (_loginService.IsValid)
                 {
                     return Ok(result);
@@ -38,9 +35,7 @@ namespace MicromaxApi.Controllers
             {
                 return BadRequest(new ApiErrorResponse(ModelState));
             }
-
         }
-
 
     }
 }

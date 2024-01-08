@@ -5,10 +5,11 @@ using MicromaxApi.Services.Dto;
 using MicromaxApi.Services.Implementation;
 using MicromaxApi.Services.Interface;
 using Microsoft.AspNetCore.Mvc;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MicromaxApi.Controllers
 {
-    [Route("api/capture-image")]
+    [Route("api/image")]
     [ApiController]
 
     public class CaptureImageController : ControllerBase
@@ -21,15 +22,68 @@ namespace MicromaxApi.Controllers
         }
 
         [HttpGet]
-        [Route("get-list")]
+        [Route("image-list")]
         public async Task<IActionResult> GetImageByUserAsync(string userid)
         {
             if (ModelState.IsValid)
             {
-                var result = await _imageService.GetImagesByUser(userid);
+                var result = await _imageService.GetImages(userid);
                 if (_imageService.IsValid)
                 {
-                    var response = new ApiResponse<List<ImageResponse>>
+                    var response = new ApiResponse<List<ImagesResponse>>
+                    {
+                        Data = result.ToList(),
+                    };
+                    return Ok(response);
+                }
+                else
+                {
+                    return BadRequest(_imageService.Validation);
+                }
+            }
+            else
+            {
+                return BadRequest(new ApiErrorResponse(ModelState));
+            }
+        }
+
+        [HttpPost]
+        [Route("image")]
+        public IActionResult Save([FromBody] ImageModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = _imageService.SaveImages(model);
+                if (!_imageService.IsValid)
+                {
+                    return BadRequest(_imageService.Validation);
+                }
+                else
+                {
+                    var response = new ApiResponse<Task<bool>>
+                    {
+                        Data = result
+                    };
+
+                    return Ok(response);
+                }
+            }
+            else
+            {
+                return BadRequest(new ApiErrorResponse(ModelState));
+            }
+        }
+
+        [HttpGet]
+        [Route("get-list")]
+        public async Task<IActionResult> GetImages(string userid)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _imageService.GetImages(userid);
+                if (_imageService.IsValid)
+                {
+                    var response = new ApiResponse<List<ImagesResponse>>
                     {
                         Data = result.ToList(),
                     };

@@ -20,16 +20,36 @@ namespace MicromaxApi.Data.Repositories.Implementation
         {
             try
             {
-                var sql = "select * from tblImageUpload where created_by = @uid";
+                var sql = "select * from tblImageUpload where created_by = @UserId";
 
                 using (var connection = _context.CreateConnection())
                 {
-                    var result = await connection.QueryAsync<CaptureImageEntity>(sql, new { uid = userid });
+                    var result = await connection.QueryAsync<CaptureImageEntity>(sql, new { UserId = userid });
                     return result.ToList();
                 }
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"An error occurred: {ex}");
+                throw;
+            }
+        }
+
+        public async Task<List<ImageEntity>> GetImages(string userid)
+        {
+            try
+            {
+                var sql = "select ImageId, ImageName, ImageData, Location, User, DateCreated, ImageView, ImageType from tblImages where [User] = @UserId";
+
+                using (var connection = _context.CreateConnection())
+                {
+                    var result = await connection.QueryAsync<ImageEntity>(sql, new { UserId = userid });
+                    return result.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex}");
                 throw;
             }
         }
@@ -53,6 +73,23 @@ namespace MicromaxApi.Data.Repositories.Implementation
             }
         }
 
+        public async Task<bool> SaveImages(ImageEntity entity)
+        {
+            try
+            {
+                var sql = "insert into tblImages (ImageId, ImageName, ImageData, DateCreated, Location, [User], ImageView, ImageType) values (@imageId, @imageName, @imageData, @dateCreated, @location, @user, @imageView, @imageType)";
 
+                using (var connection = _context.CreateConnection())
+                {
+                    var count = await connection.ExecuteAsync(sql, entity);
+                    return count > 0;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
