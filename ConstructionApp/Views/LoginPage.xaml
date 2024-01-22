@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ConstructionApp.LoginPage"
+             x:Class="ConstructionApp.Views.LoginPage"
+             xmlns:viewmodels="clr-namespace:ConstructionApp.ViewModel"
+             x:DataType="viewmodels:LoginViewModel"
              Title="LoginPage"
-             NavigationPage.HasBackButton="false"
     BackgroundColor="{StaticResource Primary}">
 
     <Grid>
@@ -22,7 +23,7 @@
                 <Label FontFamily="OpenSansRegular" TextColor="{StaticResource LabelText}" 
                        FontSize="16" FontAttributes="Bold" Text="Username"/>
                 <Grid Margin="0,5">
-                    <Entry x:Name="txtUserName" BackgroundColor="Transparent" Placeholder="Enter username" 
+                    <Entry Text="{Binding Username}" BackgroundColor="Transparent" Placeholder="Enter username" 
                            TextColor="Black" Margin="5,0"
                            PlaceholderColor="#454545" />
                 </Grid>
@@ -30,14 +31,14 @@
                 <Label FontFamily="OpenSansRegular" TextColor="{StaticResource LabelText}" 
                        FontSize="16" FontAttributes="Bold" Text="Password"/>
                 <Grid Margin="0,5">
-                    <Entry x:Name="txtPassword" BackgroundColor="Transparent" Placeholder="Enter password" 
+                    <Entry Text="{Binding Password}" BackgroundColor="Transparent" Placeholder="Enter password" 
                            TextColor="Black" Margin="5,0"
                            PlaceholderColor="#454545" IsPassword="True"/>
 
                 </Grid>
             </StackLayout>
 
-            <Button x:Name ="btnLogin" Clicked="Login_Clicked" Margin="0,15" BackgroundColor="{StaticResource LightBackground}"
+            <Button Command="{Binding LoginCommand}" Margin="0,15" BackgroundColor="{StaticResource LightBackground}"
                     Text="Sign in" TextColor="{StaticResource LabelText}" FontFamily="OpenSansBold"/>
             <Label x:Name="MessageLabel" FontSize="18" TextColor="Red" HorizontalOptions="Center" IsVisible="False"/>
         </StackLayout>
