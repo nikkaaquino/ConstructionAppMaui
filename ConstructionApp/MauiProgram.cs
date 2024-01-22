@@ -1,12 +1,4 @@
-﻿using Camera.MAUI;
-using ConstructionApp.DataServices.Implementation;
-using ConstructionApp.DataServices.Interface;
-using ConstructionApp.Pages;
-using ConstructionApp.Services.Implementation;
-using ConstructionApp.Services.Interface;
-using ConstructionApp.ViewModel;
-
-namespace ConstructionApp;
+﻿namespace ConstructionApp;
 
 public static class MauiProgram
 {
@@ -27,8 +19,10 @@ public static class MauiProgram
 
         builder.Services.AddSingleton<ILoginDataService, LoginDataService>();
         builder.Services.AddSingleton<PhotoDataService>();
-        builder.Services.AddSingleton<LoginPage>();
+        builder.Services.AddTransient<LoginPage>();
         builder.Services.AddSingleton<HomePage>();
+        builder.Services.AddSingleton<HomeViewModel>();
+        builder.Services.AddSingleton<LoginViewModel>();
 
         return builder.Build();
     }

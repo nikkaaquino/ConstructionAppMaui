@@ -2,14 +2,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
-             x:Class="ConstructionApp.Pages.HomePage"
+             x:Class="ConstructionApp.Views.HomePage"
              xmlns:vm="clr-namespace:ConstructionApp.ViewModel"
              x:DataType="vm:HomeViewModel"
              NavigationPage.HasBackButton="false"
              Title="HomePage">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="View Captured Photos" 
-                     Clicked="OnPhotoListClicked"/>
+        <ToolbarItem Text="Logout" 
+                     Command="{Binding TapCommand}"/>
     </ContentPage.ToolbarItems>
 
     <ScrollView>
@@ -20,7 +20,8 @@
         VerticalOptions="Fill"
         HorizontalOptions="Fill">
 
-            <Button Margin="20" Text="Open Camera" Clicked="Button_Clicked"/>
+            <Button Margin="20" Text="Open Camera" Command="{Binding CaptureCommand}"/>
+            <Button Margin="20" Text="View Captured Photos" Command="{Binding GoToPhotoDetailsCommand}"/>
 
             <Image  x:Name="myImage" WidthRequest="200" HeightRequest="200"/>
 
