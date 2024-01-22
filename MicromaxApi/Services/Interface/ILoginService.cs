@@ -8,7 +8,6 @@ namespace MicromaxApi.Services.Interface
     public interface ILoginService : IErrorService
     {
         Task<LoginResponse> GetLoginById(string id);
-        Task<LoginResponse> LoginAsync(string username, string password);
         Task<LoginResponse> LoginAsync(LoginModel model);
     }
 }

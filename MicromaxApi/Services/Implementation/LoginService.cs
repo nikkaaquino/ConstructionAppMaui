@@ -42,37 +42,13 @@ namespace MicromaxApi.Services.Implementation
             }
         }
 
-        public async Task<LoginResponse> LoginAsync(string username, string password)
-        {
-            try
-            {
-                var result = await _loginRepo.GetById(username);
-                if (result.UserId == username && result.UsrPassword == password)
-                {
-                    var response = new LoginResponse
-                    {
-                        UserId = result.UserId,
-                        UsrPassword = result.UsrPassword
-                    };
-                    return response;
-                }
-                return null;
-            }
-            catch (Exception ex)
-            {
-                Validation.Add("errors", "Invalid Username or Password");
-                return null;
-            }
-
-        }
-
         public async Task<LoginResponse> LoginAsync(LoginModel model)
         {
             try
             {
                 var user = await _loginRepo.GetById(model.UserId.ToUpper());
                 byte[] key = Encoding.UTF8.GetBytes("password");
-                byte[] encrypted = RC4Encrypt(model.Password.ToUpper(), key);
+                byte[] encrypted = RC4Encrypt(model.Password, key);
                 string convertedPassword = BitConverter.ToString(encrypted).Replace("-", "");
 
                 if (user == null)
