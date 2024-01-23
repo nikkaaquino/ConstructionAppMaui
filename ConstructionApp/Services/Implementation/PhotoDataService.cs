@@ -1,8 +1,4 @@
-﻿
-using ConstructionApp.Services.Interface;
-using System.Net.Http.Json;
-
-namespace ConstructionApp.Services.Implementation
+﻿namespace ConstructionApp.Services.Implementation
 {
     public class PhotoDataService
     {
