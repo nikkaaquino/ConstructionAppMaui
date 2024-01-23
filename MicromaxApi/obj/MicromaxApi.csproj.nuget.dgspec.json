@@ -49,10 +49,6 @@
               "target": "Package",
               "version": "[7.0.1, )"
             },
-            "CommunityToolkit.Mvvm": {
-              "target": "Package",
-              "version": "[8.2.0, )"
-            },
             "Dapper": {
               "target": "Package",
               "version": "[2.0.123, )"
@@ -67,11 +63,7 @@
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[5.1.1, )"
-            },
-            "Microsoft.Extensions.Logging.Debug": {
-              "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[5.1.4, )"
             },
             "NewtonSoft.Json": {
               "target": "Package",
