@@ -2,11 +2,19 @@
 {
     public partial class HomeViewModel : ObservableObject
     {
+        public PhotoModel photoDetails {  get; set; }
+
         [RelayCommand]
         async Task Tap()
         {
             await Shell.Current.GoToAsync("//LoginPage");
 
+        }
+
+        [RelayCommand]
+        async Task SavePhoto()
+        {
+            var addPhoto = this.photoDetails;
         }
 
         [RelayCommand]
