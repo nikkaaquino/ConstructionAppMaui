@@ -9,3 +9,4 @@ global using Camera.MAUI;
 global using ConstructionApp.DataServices.Implementation;
 global using ConstructionApp.DataServices.Interface;
 global using ConstructionApp.Services.Implementation;
+global using System.Net.Http.Json;
