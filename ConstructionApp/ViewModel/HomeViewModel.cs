@@ -4,6 +4,12 @@
     {
         public PhotoModel photoDetails {  get; set; }
 
+        IPhotoDataService photoDataService;
+        public HomeViewModel(IPhotoDataService photoDataService)
+        {
+            this.photoDataService = photoDataService;
+        }
+
         [RelayCommand]
         async Task Tap()
         {
@@ -14,7 +20,15 @@
         [RelayCommand]
         async Task SavePhoto()
         {
-            var addPhoto = this.photoDetails;
+            try
+            {
+                Debug.WriteLine("---> Add New Item");
+                await photoDataService.AddPhotoAsync(photoDetails);
+                await Shell.Current.DisplayAlert("Information", "Successfully addded", "Ok");
+            }catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error", ex.Message, "Ok");
+            }
         }
 
         [RelayCommand]

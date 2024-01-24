@@ -13,10 +13,4 @@ namespace ConstructionApp.Model
         public byte[] ImageView { get; set; }
         public string ImageType { get; set; }
     }
-
-    [JsonSerializable(typeof(List<PhotoModel>))]
-    internal sealed partial class PhotoModelContext : JsonSerializerContext
-    {
-
-    }
 }

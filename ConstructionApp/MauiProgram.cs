@@ -18,6 +18,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<IMap>(Map.Default);
 
         builder.Services.AddSingleton<ILoginDataService, LoginDataService>();
+        builder.Services.AddSingleton<IPhotoDataService, PhotoDataService>();
         builder.Services.AddSingleton<PhotoDataService>();
         builder.Services.AddTransient<LoginPage>();
         builder.Services.AddSingleton<HomePage>();

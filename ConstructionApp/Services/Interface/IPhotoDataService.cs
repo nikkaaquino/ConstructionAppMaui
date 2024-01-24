@@ -5,5 +5,6 @@
         Task<List<PhotoModel>> GetAllPhotosAsync(string username);
         Task AddPhotoAsync(PhotoModel model);
         Task DeletePhotoAsync(int id);
+        Task UpdatePhotoAsync(PhotoModel model);
     }
 }
