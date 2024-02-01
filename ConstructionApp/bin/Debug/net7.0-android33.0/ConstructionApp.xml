@@ -4,50 +4,6 @@
         <name>ConstructionApp</name>
     </assembly>
     <members>
-        <member name="P:ConstructionApp.Model.PhotoModelContext.Int32">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ConstructionApp.Model.PhotoModelContext.String">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ConstructionApp.Model.PhotoModelContext.ByteArray">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ConstructionApp.Model.PhotoModelContext.PhotoModel">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ConstructionApp.Model.PhotoModelContext.ListPhotoModel">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ConstructionApp.Model.PhotoModelContext.Default">
-            <summary>
-            The default <see cref="T:System.Text.Json.Serialization.JsonSerializerContext"/> associated with a default <see cref="T:System.Text.Json.JsonSerializerOptions"/> instance.
-            </summary>
-        </member>
-        <member name="P:ConstructionApp.Model.PhotoModelContext.GeneratedSerializerOptions">
-            <summary>
-            The source-generated options associated with this context.
-            </summary>
-        </member>
-        <member name="M:ConstructionApp.Model.PhotoModelContext.#ctor">
-            <inheritdoc/>
-        </member>
-        <member name="M:ConstructionApp.Model.PhotoModelContext.#ctor(System.Text.Json.JsonSerializerOptions)">
-            <inheritdoc/>
-        </member>
-        <member name="M:ConstructionApp.Model.PhotoModelContext.GetTypeInfo(System.Type)">
-            <inheritdoc/>
-        </member>
         <member name="T:ConstructionApp.ViewModel.BaseViewModel">
             <inheritdoc/>
         </member>
@@ -62,6 +18,28 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.ImgId">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._imgId"/>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.ImgName">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._imgName"/>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.ImgData">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._imgData"/>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.Loc">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._loc"/>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.Owner">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._owner"/>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.ImgView">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._imgView"/>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.ImgType">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._imgType"/>
         </member>
         <member name="F:ConstructionApp.ViewModel.HomeViewModel.tapCommand">
             <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.HomeViewModel.TapCommand"/>.</summary>
@@ -115,6 +93,27 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ImgId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ImgId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ImgName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ImgName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ImgData">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ImgData" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Loc">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Loc" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Owner">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Owner" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ImgView">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ImgView" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ImgType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ImgType" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Username">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Username" generated properties.</summary>
         </member>
@@ -135,6 +134,27 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ImgId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ImgId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ImgName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ImgName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ImgData">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ImgData" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Loc">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Loc" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Owner">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Owner" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ImgView">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ImgView" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ImgType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ImgType" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Username">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Username" generated properties.</summary>
