@@ -2019,7 +2019,10 @@ C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\CommunityToolkit.Mvvm.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\CommunityToolkit.Mvvm.pdb
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\ConstructionApp.sourcelink.json
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\Flurl.dll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\Flurl.Http.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\mscorlib.dll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\Newtonsoft.Json.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\System.Collections.Concurrent.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\System.Data.Common.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\System.Data.dll

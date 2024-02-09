@@ -1,9 +1,4 @@
-﻿using ConstructionApp.DataServices.Interface;
-using ConstructionApp.Model;
-using System.Diagnostics;
-using System.Text.Json;
-
-namespace ConstructionApp.DataServices.Implementation
+﻿namespace ConstructionApp.DataServices.Implementation
 {
     public class LoginDataService : ILoginDataService
     {

@@ -1,4 +1,6 @@
-﻿namespace ConstructionApp.Services.Interface
+﻿using ConstructionApp.Model.Response;
+
+namespace ConstructionApp.Services.Interface
 {
     public interface IPhotoDataService
     {

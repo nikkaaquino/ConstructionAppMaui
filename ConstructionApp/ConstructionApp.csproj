@@ -53,12 +53,15 @@
 		  <TreatAsUsed>true</TreatAsUsed>
 		</PackageReference>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+		<PackageReference Include="Flurl" Version="4.0.0" />
+		<PackageReference Include="Flurl.Http" Version="4.0.2" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0">
 		  <TreatAsUsed>true</TreatAsUsed>
 		</PackageReference>
 		<PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2">
 		  <TreatAsUsed>true</TreatAsUsed>
 		</PackageReference>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>

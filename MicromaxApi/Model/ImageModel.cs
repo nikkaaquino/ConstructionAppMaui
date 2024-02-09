@@ -7,7 +7,7 @@
         public string ImageData { get; set; }
         public string Location { get; set; }
         public string User { get; set; }
-        public byte[] ImageView { get; set; }
+        //public string ImageView { get; set; }
         public string ImageType { get; set; }
     }
 }

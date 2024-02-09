@@ -35,8 +35,8 @@
             <Label Padding="0, 10, 0, 0" Text="User"/>
             <Entry Text="{Binding Owner}"/>
 
-            <Label Padding="0, 10, 0, 0" Text="ImageView"/>
-            <Entry Text="{Binding ImgView}"/>
+            <!--<Label Padding="0, 10, 0, 0" Text="ImageView"/>
+            <Entry Text="{Binding ImgView}"/>-->
 
             <Label Padding="0, 10, 0, 0" Text="ImageType"/>
             <Entry Text="{Binding ImgType}"/>

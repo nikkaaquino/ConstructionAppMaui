@@ -69,6 +69,14 @@
               "target": "Package",
               "version": "[8.2.1, )"
             },
+            "Flurl": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Flurl.Http": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -108,6 +116,10 @@
             "Microsoft.Toolkit.Mvvm": {
               "target": "Package",
               "version": "[7.1.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Xamarin.Android.Glide": {
               "target": "Package",
@@ -252,6 +264,14 @@
               "target": "Package",
               "version": "[8.2.1, )"
             },
+            "Flurl": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Flurl.Http": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -291,6 +311,10 @@
             "Microsoft.Toolkit.Mvvm": {
               "target": "Package",
               "version": "[7.1.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
@@ -368,6 +392,14 @@
               "target": "Package",
               "version": "[8.2.1, )"
             },
+            "Flurl": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Flurl.Http": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -407,6 +439,10 @@
             "Microsoft.Toolkit.Mvvm": {
               "target": "Package",
               "version": "[7.1.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
@@ -485,6 +521,14 @@
               "target": "Package",
               "version": "[8.2.1, )"
             },
+            "Flurl": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "Flurl.Http": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -522,6 +566,10 @@
               "target": "Package",
               "version": "[1.2.221209.1, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [

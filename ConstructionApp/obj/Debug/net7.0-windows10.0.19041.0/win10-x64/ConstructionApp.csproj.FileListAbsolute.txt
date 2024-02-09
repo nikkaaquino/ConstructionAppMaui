@@ -658,3 +658,6 @@ C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\logo.scale-100.png
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_7.0.1423.51910.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\ConstructionApp.sourcelink.json
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Flurl.dll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Flurl.Http.dll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll

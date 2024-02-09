@@ -9,7 +9,7 @@ namespace ConstructionApp.ViewModel
         [ObservableProperty] public string _imgData;
         [ObservableProperty] public string _loc;
         [ObservableProperty] public string _owner;
-        [ObservableProperty] public string _imgView;
+        //[ObservableProperty] public string _imgView;
         [ObservableProperty] public string _imgType;
 
 
@@ -39,7 +39,7 @@ namespace ConstructionApp.ViewModel
                     Location = Loc,
                     User = Owner,
                     ImageType = ImgType,
-                    ImageView = ImgView,
+                    //ImageView = ImgView,
                 };
 
                 Debug.WriteLine("---> Add New Item");

@@ -35,7 +35,7 @@ namespace MicromaxApi.Services.Interface
                     User = userid,
                     //ImageView = x.ImageView,
                     ImageType =  x.ImageType,
-                    ImageUrl = "data:image/" + x.ImageType + ";base64," + Convert.ToBase64String(x.ImageView)
+                    //ImageUrl = "data:image/" + x.ImageType + ";base64," + Convert.ToBase64String(x.ImageView)
 
                 }).ToList();
 
@@ -120,7 +120,7 @@ namespace MicromaxApi.Services.Interface
                     Location = model.Location,
                     User = model.User,
                     DateCreated = DateTime.Now,
-                    ImageView = model.ImageView,
+                    //ImageView = model.ImageView,
                     ImageType = model.ImageType,
                     
                 };
