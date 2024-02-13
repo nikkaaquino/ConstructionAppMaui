@@ -20,27 +20,6 @@
         VerticalOptions="Fill"
         HorizontalOptions="Fill">
 
-            <Label Padding="0, 10, 0, 0" Text="ImageId"/>
-            <Entry Text="{Binding ImgId}"/>
-
-            <Label Padding="0, 10, 0, 0" Text="ImageName"/>
-            <Entry Text="{Binding ImgName}"/>
-
-            <Label Padding="0, 10, 0, 0" Text="ImageData"/>
-            <Entry Text="{Binding ImgData}"/>
-
-            <Label Padding="0, 10, 0, 0" Text="Location"/>
-            <Entry Text="{Binding Loc}"/>
-
-            <Label Padding="0, 10, 0, 0" Text="User"/>
-            <Entry Text="{Binding Owner}"/>
-
-            <!--<Label Padding="0, 10, 0, 0" Text="ImageView"/>
-            <Entry Text="{Binding ImgView}"/>-->
-
-            <Label Padding="0, 10, 0, 0" Text="ImageType"/>
-            <Entry Text="{Binding ImgType}"/>
-
             <Button Margin="20" Text="Save Photo" Command="{Binding SavePhotoCommand}"/>
             <Button Margin="20" Text="Open Camera" Command="{Binding CaptureCommand}"/>
             <Button Margin="20" Text="View Captured Photos" Command="{Binding GoToPhotoDetailsCommand}"/>

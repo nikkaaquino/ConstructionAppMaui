@@ -3,11 +3,12 @@ using MicromaxApi.Data.Repositories.Interface;
 using MicromaxApi.Model;
 using MicromaxApi.Services.Config;
 using MicromaxApi.Services.Dto;
+using MicromaxApi.Services.Interface;
 using System.Runtime.InteropServices;
 using System.Text;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace MicromaxApi.Services.Interface
+namespace MicromaxApi.Services.Implementation
 {
     public class CaptureImageService : ErrorService, ICaptureImageService
     {
@@ -34,9 +35,8 @@ namespace MicromaxApi.Services.Interface
                     DateCreated = x.DateCreated,
                     User = userid,
                     //ImageView = x.ImageView,
-                    ImageType =  x.ImageType,
-                    //ImageUrl = "data:image/" + x.ImageType + ";base64," + Convert.ToBase64String(x.ImageView)
-
+                    ImageType = x.ImageType,
+                    ImageUrl = "data:image/" + x.ImageType + ";base64," + Convert.ToBase64String(x.ImageView)
                 }).ToList();
 
                 return response;
@@ -67,7 +67,7 @@ namespace MicromaxApi.Services.Interface
                 }).ToList();
 
                 return response;
-                
+
 
             }
             catch (Exception ex)
@@ -92,22 +92,22 @@ namespace MicromaxApi.Services.Interface
                 };
 
 
-                var isSaved = await this._repo.SaveImage(saveEntity);
+                var isSaved = await _repo.SaveImage(saveEntity);
                 if (!isSaved)
                 {
-                    this.Validation.Add("errors", "Something went wrong. Please try again in a while");
+                    Validation.Add("errors", "Something went wrong. Please try again in a while");
                 }
 
                 return isSaved;
             }
             catch (Exception ex)
             {
-                this.Validation.Add("errors", "Something went wrong. Please try again in a while");
+                Validation.Add("errors", "Something went wrong. Please try again in a while");
                 return false;
             }
         }
 
-        public async  Task<bool> SaveImages(ImageModel model)
+        public async Task<bool> SaveImages(ImageModel model)
         {
             try
             {
@@ -120,23 +120,23 @@ namespace MicromaxApi.Services.Interface
                     Location = model.Location,
                     User = model.User,
                     DateCreated = DateTime.Now,
-                    //ImageView = model.ImageView,
+                    ImageView = model.ImageView,
                     ImageType = model.ImageType,
-                    
+
                 };
 
 
-                var isSaved = await this._repo.SaveImages(saveEntity);
+                var isSaved = await _repo.SaveImages(saveEntity);
                 if (!isSaved)
                 {
-                    this.Validation.Add("errors", "Something went wrong. Please try again in a while");
+                    Validation.Add("errors", "Something went wrong. Please try again in a while");
                 }
 
                 return isSaved;
             }
             catch (Exception ex)
             {
-                this.Validation.Add("errors", "Something went wrong. Please try again in a while");
+                Validation.Add("errors", "Something went wrong. Please try again in a while");
                 return false;
             }
         }

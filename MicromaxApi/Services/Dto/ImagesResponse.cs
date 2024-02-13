@@ -28,7 +28,8 @@ namespace MicromaxApi.Services.Dto
 
         [JsonProperty]
         public string ImageType { get; set; }
-        //[JsonProperty]
-        //public string ImageUrl { get; set; }
+
+        [JsonProperty]
+        public string ImageUrl { get; set; }
     }
 }

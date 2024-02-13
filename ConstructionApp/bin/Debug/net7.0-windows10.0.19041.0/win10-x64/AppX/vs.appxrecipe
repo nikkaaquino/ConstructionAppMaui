@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-02-09T10:30:29.190</Modified>
+      <Modified>2024-02-13T10:31:32.395</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\ConstructionApp.dll">
       <PackagePath>ConstructionApp.dll</PackagePath>
-      <Modified>2024-02-09T10:30:28.064</Modified>
+      <Modified>2024-02-13T10:31:30.853</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ConstructionApp.exe</PackagePath>
-      <Modified>2024-02-09T10:30:28.075</Modified>
+      <Modified>2024-02-13T10:31:30.916</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\ConstructionApp.deps.json">
       <PackagePath>ConstructionApp.deps.json</PackagePath>

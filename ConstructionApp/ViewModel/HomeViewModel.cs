@@ -9,7 +9,7 @@ namespace ConstructionApp.ViewModel
         [ObservableProperty] public string _imgData;
         [ObservableProperty] public string _loc;
         [ObservableProperty] public string _owner;
-        //[ObservableProperty] public string _imgView;
+        [ObservableProperty] public byte[] _imgView;
         [ObservableProperty] public string _imgType;
 
 
@@ -66,6 +66,22 @@ namespace ConstructionApp.ViewModel
                     using Stream sourceStream = await myPhoto.OpenReadAsync();
                     using FileStream localFileStream = File.OpenWrite(localFilePath);
                     await sourceStream.CopyToAsync(localFileStream);
+
+                    var addPhoto = new PhotoModel
+                    {
+                        ImageId = ImgId,
+                        ImageName = ImgName,
+                        ImageData = ImgData,
+                        Location = Loc,
+                        User = Owner,
+                        ImageType = ImgType,
+                        //ImageView = ImgView
+                    };
+
+                    Debug.WriteLine("---> Add New Item");
+                    await photoDataService.AddPhotoAsync(addPhoto);
+                    await Shell.Current.DisplayAlert("Information", "Successfully addded", "Ok");
+
                 }
             }
             else

@@ -35,9 +35,6 @@
         <member name="P:ConstructionApp.ViewModel.HomeViewModel.Owner">
             <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._owner"/>
         </member>
-        <member name="P:ConstructionApp.ViewModel.HomeViewModel.ImgView">
-            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._imgView"/>
-        </member>
         <member name="P:ConstructionApp.ViewModel.HomeViewModel.ImgType">
             <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._imgType"/>
         </member>
@@ -108,9 +105,6 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Owner">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Owner" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ImgView">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ImgView" generated properties.</summary>
-        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ImgType">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ImgType" generated properties.</summary>
         </member>
@@ -149,9 +143,6 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Owner">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Owner" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ImgView">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ImgView" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ImgType">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ImgType" generated properties.</summary>

@@ -77,8 +77,7 @@ namespace MicromaxApi.Data.Repositories.Implementation
         {
             try
             {
-                var sql = "insert into tblImages (ImageId, ImageName, ImageData, DateCreated, Location, [User], ImageType) values (@imageId, @imageName, @imageData, @dateCreated, @location, @user, @imageType)";
-
+                var sql = "insert into tblImages (ImageId, ImageName, ImageData, DateCreated, Location, [User], ImageView, ImageType) values (@imageId, @imageName, @imageData, @dateCreated, @location, @user, @imageView, @imageType)";
                 using (var connection = _context.CreateConnection())
                 {
                     var count = await connection.ExecuteAsync(sql, entity);
