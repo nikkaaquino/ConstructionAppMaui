@@ -1,6 +1,4 @@
-﻿using ConstructionApp.Services.Interface;
-
-namespace ConstructionApp.ViewModel
+﻿namespace ConstructionApp.ViewModel
 {
     public partial class HomeViewModel : ObservableObject
     {
@@ -12,6 +10,8 @@ namespace ConstructionApp.ViewModel
         [ObservableProperty] public byte[] _imgView;
         [ObservableProperty] public string _imgType;
 
+        [ObservableProperty] public CameraView _cameraView;
+        [ObservableProperty] ImageSource _imgSrc;
 
         IPhotoDataService photoDataService;
         public HomeViewModel(IPhotoDataService photoDataService)
@@ -22,6 +22,7 @@ namespace ConstructionApp.ViewModel
         [RelayCommand]
         async Task Tap()
         {
+            //TODO: refresh page without details
             await Shell.Current.GoToAsync("//LoginPage");
 
         }
@@ -51,6 +52,25 @@ namespace ConstructionApp.ViewModel
                 await Shell.Current.DisplayAlert("Error", ex.Message, "Ok");
             }
         }
+
+        [RelayCommand]
+        async Task ViewCamera()
+        {
+            CameraView.Camera = CameraView.Cameras.First();
+
+            MainThread.BeginInvokeOnMainThread(async () =>
+            {
+                await CameraView.StopCameraAsync();
+                await CameraView.StartCameraAsync();
+
+            });
+        }
+
+        [RelayCommand]
+        async Task CapturePhoto()
+        {
+           ImgSrc = CameraView.GetSnapShot(Camera.MAUI.ImageFormat.PNG);
+        }       
 
         [RelayCommand]
         async Task Capture()

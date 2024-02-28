@@ -20,10 +20,15 @@
         VerticalOptions="Fill"
         HorizontalOptions="Fill">
 
+            <cv:CameraView x:Name="cameraView" WidthRequest="300" HeightRequest="300" Cameras ="{Binding ViewCameraCommand}"/>
+
+            <Button Text="Smile!" Command="{Binding CapturePhotoCommand}"/>
+
+            <Image Source="{Binding ImgSrc}" WidthRequest="200" HeightRequest="200" />
+
             <Button Margin="20" Text="Save Photo" Command="{Binding SavePhotoCommand}"/>
             <Button Margin="20" Text="Open Camera" Command="{Binding CaptureCommand}"/>
             <Button Margin="20" Text="View Captured Photos" Command="{Binding GoToPhotoDetailsCommand}"/>
-            <Image  x:Name="myImage" WidthRequest="200" HeightRequest="200"/>
 
         </VerticalStackLayout>
     </ScrollView>
