@@ -37,5 +37,12 @@ namespace ConstructionApp.ViewModel
                 }
 
         }
+
+        private bool isRunning = false;
+        public bool IsRunning
+        {
+            set => SetProperty(ref isRunning, value);
+            get => isRunning;
+        }
     }
 }

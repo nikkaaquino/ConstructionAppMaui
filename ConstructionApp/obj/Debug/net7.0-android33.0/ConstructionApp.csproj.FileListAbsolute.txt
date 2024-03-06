@@ -1507,7 +1507,6 @@ C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\Xamarin.KotlinX.Coroutines.Android.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\Xamarin.KotlinX.Coroutines.Core.Jvm.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\zxing.dll
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\typemaps.x86_64.ll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\AndroidManifest.xml
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\AndroidManifest.xml
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\__environment__.txt
@@ -1516,7 +1515,6 @@ C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\bin\mono.android.jar
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\static.flag
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\buildid.txt
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\environment.x86_64.ll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\src\androidx\activity\ktx\R.java
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\src\androidx\activity\R.java
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\src\androidx\annotation\experimental\R.java
@@ -2000,12 +1998,6 @@ C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\src\mono\MonoPackageManager_Resources.java
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\bin\packaged_resources
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\src\com\companyname\constructionapp\R.java
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\compressed_assemblies.x86_64.ll
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\typemaps.x86_64.o
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\environment.x86_64.o
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\compressed_assemblies.x86_64.o
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\jni_remap.x86_64.o
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\app_shared_libraries\x86_64\libxamarin-app.so
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\bin\classes.dex
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\bin\classes2.dex
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\stamp\_CleanIntermediateIfNeeded.stamp
@@ -2035,3 +2027,11 @@ C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\System.Runtime.Extensions.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\System.Runtime.Serialization.Formatters.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\System.Xml.dll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\typemaps.x86_64.ll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\environment.x86_64.ll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\compressed_assemblies.x86_64.ll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\typemaps.x86_64.o
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\environment.x86_64.o
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\compressed_assemblies.x86_64.o
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\jni_remap.x86_64.o
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\app_shared_libraries\x86_64\libxamarin-app.so

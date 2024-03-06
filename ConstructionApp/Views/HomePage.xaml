@@ -20,15 +20,18 @@
         VerticalOptions="Fill"
         HorizontalOptions="Fill">
 
-            <cv:CameraView x:Name="cameraView" WidthRequest="300" HeightRequest="300" Cameras ="{Binding ViewCameraCommand}"/>
+            <Image x:Name="TakePhotoImage"
+                      Source="{Binding CompletePhotoPath,Mode=TwoWay}" 
+                      IsVisible="{Binding HasPhoto}"
+                      HeightRequest="450" 
+                      VerticalOptions="FillAndExpand"/>
 
-            <Button Text="Smile!" Command="{Binding CapturePhotoCommand}"/>
+            <Button x:Name="TakePhoto"
+                       BackgroundColor="{StaticResource PrimaryBrush}"
+                       Command="{Binding CapturePhotoCommand}"
+                       Text="Capture Photo"
+                       TextColor="{StaticResource White}"/> 
 
-            <Image Source="{Binding ImgSrc}" WidthRequest="200" HeightRequest="200" />
-
-            <Button Margin="20" Text="Save Photo" Command="{Binding SavePhotoCommand}"/>
-            <Button Margin="20" Text="Open Camera" Command="{Binding CaptureCommand}"/>
-            <Button Margin="20" Text="View Captured Photos" Command="{Binding GoToPhotoDetailsCommand}"/>
 
         </VerticalStackLayout>
     </ScrollView>

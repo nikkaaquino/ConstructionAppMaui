@@ -36,6 +36,8 @@
                            PlaceholderColor="#454545" IsPassword="True"/>
 
                 </Grid>
+                <ActivityIndicator HeightRequest="50" WidthRequest="50" IsRunning="{Binding IsRunning}" IsVisible="{Binding IsRunning}"></ActivityIndicator>
+                
             </StackLayout>
 
             <Button Command="{Binding LoginCommand}" Margin="0,15" BackgroundColor="{StaticResource LightBackground}"

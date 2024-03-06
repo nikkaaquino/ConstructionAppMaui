@@ -13,6 +13,26 @@
         [ObservableProperty] public CameraView _cameraView;
         [ObservableProperty] ImageSource _imgSrc;
 
+
+        private string photoPath;
+        public string CompletePhotoPath
+        {
+            get => photoPath;
+            set
+            {
+                SetProperty(ref photoPath, value);
+                HasPhoto = !string.IsNullOrEmpty(value);
+            }
+        }
+
+        private bool _hasPhoto;
+        public bool HasPhoto
+        {
+            get => _hasPhoto;
+            set => SetProperty(ref _hasPhoto, value);
+
+        }
+
         IPhotoDataService photoDataService;
         public HomeViewModel(IPhotoDataService photoDataService)
         {
@@ -27,86 +47,64 @@
 
         }
 
-        [RelayCommand]
-        async Task SavePhoto()
+        public async Task<String> LoadPhotoAsync(FileResult photo)
         {
-            try
-            {
-                var addPhoto = new PhotoModel
-                {
-                    ImageId = ImgId,
-                    ImageName = ImgName,
-                    ImageData = ImgData,
-                    Location = Loc,
-                    User = Owner,
-                    ImageType = ImgType,
-                    //ImageView = ImgView,
-                };
+            var stream = photo.OpenReadAsync().Result;
 
-                Debug.WriteLine("---> Add New Item");
-                await photoDataService.AddPhotoAsync(addPhoto);
-                await Shell.Current.DisplayAlert("Information", "Successfully addded", "Ok");
-            }
-            catch (Exception ex)
+            byte[] imagedata;
+
+            using (MemoryStream ms = new MemoryStream())
             {
-                await Shell.Current.DisplayAlert("Error", ex.Message, "Ok");
+                stream.CopyTo(ms);
+                imagedata = ms.ToArray();
             }
+
+            var addPhoto = new PhotoModel
+            {
+                ImageId = 03062024,
+                ImageName = "imgname_nikka0306202",
+                ImageData = "img_datanikka03062024",
+                Location = "loc_nikka03062024",
+                User = "mmaquino",
+                ImageType = "png",
+                ImageView = imagedata,
+            };
+
+            await photoDataService.AddPhotoAsync(addPhoto);
+
+            var folderpath = Path.Combine(FileSystem.AppDataDirectory, "Photo");
+            if (!File.Exists(folderpath))
+            {
+                Directory.CreateDirectory(folderpath);
+            }
+
+            var empfilename = Guid.NewGuid() + "_photo.jpg";
+
+            var newfile = Path.Combine(folderpath, empfilename);// Complete Path of the photo
+
+            using (var stream2 = new MemoryStream(imagedata))
+            using (var newstream = File.OpenWrite(newfile))
+            {
+                await stream2.CopyToAsync(newstream);
+            }
+
+            return newfile;
         }
 
-        [RelayCommand]
-        async Task ViewCamera()
-        {
-            CameraView.Camera = CameraView.Cameras.First();
-
-            MainThread.BeginInvokeOnMainThread(async () =>
-            {
-                await CameraView.StopCameraAsync();
-                await CameraView.StartCameraAsync();
-
-            });
-        }
 
         [RelayCommand]
         async Task CapturePhoto()
         {
-           ImgSrc = CameraView.GetSnapShot(Camera.MAUI.ImageFormat.PNG);
-        }       
-
-        [RelayCommand]
-        async Task Capture()
-        {
-            //myImage.Source = cameraView.GetSnapShot(Camera.MAUI.ImageFormat.JPEG);
-            if (MediaPicker.Default.IsCaptureSupported)
+            try
             {
-                FileResult myPhoto = await MediaPicker.Default.CapturePhotoAsync();
-                if (myPhoto != null)
-                {
-                    //save the image capture in the application
-                    string localFilePath = Path.Combine(FileSystem.CacheDirectory, myPhoto.FileName);
-                    using Stream sourceStream = await myPhoto.OpenReadAsync();
-                    using FileStream localFileStream = File.OpenWrite(localFilePath);
-                    await sourceStream.CopyToAsync(localFileStream);
-
-                    var addPhoto = new PhotoModel
-                    {
-                        ImageId = ImgId,
-                        ImageName = ImgName,
-                        ImageData = ImgData,
-                        Location = Loc,
-                        User = Owner,
-                        ImageType = ImgType,
-                        //ImageView = ImgView
-                    };
-
-                    Debug.WriteLine("---> Add New Item");
-                    await photoDataService.AddPhotoAsync(addPhoto);
-                    await Shell.Current.DisplayAlert("Information", "Successfully addded", "Ok");
-
-                }
+                var photo = await MediaPicker.CapturePhotoAsync();
+                CompletePhotoPath = await LoadPhotoAsync(photo);
+                 
+                Console.WriteLine("Photo Captured" + CompletePhotoPath);
             }
-            else
+            catch (Exception ex)
             {
-                await Shell.Current.DisplayAlert("OOPS", "Your device isn't supported", "Ok");
+                Console.Write(ex.ToString());
             }
         }
 
