@@ -15,6 +15,7 @@
 
 
         private string photoPath;
+        
         public string CompletePhotoPath
         {
             get => photoPath;
@@ -34,9 +35,14 @@
         }
 
         IPhotoDataService photoDataService;
-        public HomeViewModel(IPhotoDataService photoDataService)
+        IGeolocation geolocation;
+        IMap map;
+
+        public HomeViewModel(IPhotoDataService photoDataService, IGeolocation geolocation, IMap map)
         {
             this.photoDataService = photoDataService;
+            this.geolocation = geolocation;
+            this.map = map;
         }
 
         [RelayCommand]
@@ -59,12 +65,18 @@
                 imagedata = ms.ToArray();
             }
 
+            var location =  await geolocation.GetLocationAsync(new GeolocationRequest
+                {
+                    DesiredAccuracy = GeolocationAccuracy.Medium,
+                    Timeout = TimeSpan.FromSeconds(30)
+            });
+
             var addPhoto = new PhotoModel
             {
                 ImageId = 03062024,
                 ImageName = "imgname_nikka0306202",
                 ImageData = "img_datanikka03062024",
-                Location = "loc_nikka03062024",
+                Location = location.Longitude + "," + location.Latitude,
                 User = "mmaquino",
                 ImageType = "png",
                 ImageView = imagedata,
