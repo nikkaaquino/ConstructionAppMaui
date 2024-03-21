@@ -5,7 +5,7 @@ namespace MicromaxApi.Data.Entity
     [Table("tblImages")]
     public class ImageEntity
     {
-        public int ImageId { get; set; }
+        public Guid ImageId { get; set; }
         public string ImageName { get; set; }
         public string ImageData { get; set; }
         public DateTime? DateCreated { get; set; }

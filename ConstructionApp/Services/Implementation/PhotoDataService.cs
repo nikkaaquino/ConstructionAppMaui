@@ -10,7 +10,7 @@
         public PhotoDataService()
         {
             _httpClient = new HttpClient();
-            _baseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5003" : "http://localhost:5003";
+            _baseAddress = Constants.BASE_API_URL;
             _url = $"{_baseAddress}/api";
 
             _jsonSerializeOptions = new JsonSerializerOptions

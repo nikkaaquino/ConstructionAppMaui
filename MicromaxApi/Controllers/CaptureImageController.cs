@@ -1,11 +1,8 @@
 ﻿using api.motorstar.Services.ApiDto;
-using Autofac.Core;
 using MicromaxApi.Model;
 using MicromaxApi.Services.Dto;
-using MicromaxApi.Services.Implementation;
 using MicromaxApi.Services.Interface;
 using Microsoft.AspNetCore.Mvc;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace MicromaxApi.Controllers
 {
@@ -92,33 +89,6 @@ namespace MicromaxApi.Controllers
                 else
                 {
                     return BadRequest(_imageService.Validation);
-                }
-            }
-            else
-            {
-                return BadRequest(new ApiErrorResponse(ModelState));
-            }
-        }
-
-        [HttpPost]
-        [Route("save")]
-        public IActionResult Save([FromBody] CaptureImageModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                var result = _imageService.SaveImage(model);
-                if (!_imageService.IsValid)
-                {
-                    return BadRequest(_imageService.Validation);
-                }
-                else
-                {
-                    var response = new ApiResponse<Task<bool>>
-                    {
-                        Data = result
-                    };
-
-                    return Ok(response);
                 }
             }
             else

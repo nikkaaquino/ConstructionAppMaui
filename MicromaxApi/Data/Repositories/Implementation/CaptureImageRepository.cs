@@ -15,26 +15,6 @@ namespace MicromaxApi.Data.Repositories.Implementation
             _context = context;
         }
 
-
-        public async Task<List<CaptureImageEntity>> GetImageByUser(string userid)
-        {
-            try
-            {
-                var sql = "select * from tblImageUpload where created_by = @UserId";
-
-                using (var connection = _context.CreateConnection())
-                {
-                    var result = await connection.QueryAsync<CaptureImageEntity>(sql, new { UserId = userid });
-                    return result.ToList();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred: {ex}");
-                throw;
-            }
-        }
-
         public async Task<List<ImageEntity>> GetImages(string userid)
         {
             try
@@ -51,25 +31,6 @@ namespace MicromaxApi.Data.Repositories.Implementation
             {
                 Console.WriteLine($"An error occurred: {ex}");
                 throw;
-            }
-        }
-
-        public async Task<bool> SaveImage(CaptureImageEntity entity)
-        {
-            try
-            {
-                var sql = "insert into tblImageUpload (img_id, img_name, img, date_created, created_by) values (@imageId, @imageName, @imageData, @dateCreated, @createdBy)";
-
-                using (var connection = _context.CreateConnection())
-                {
-                    var count = await connection.ExecuteAsync(sql, entity);
-                    return count > 0;
-
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
             }
         }
 

@@ -6,7 +6,7 @@ namespace MicromaxApi.Services.Dto
     public class ImagesResponse
     {
         [JsonProperty]
-        public int ImageId { get; set; }
+        public Guid ImageId { get; set; }
 
         [JsonProperty]
         public string ImageName { get; set; }

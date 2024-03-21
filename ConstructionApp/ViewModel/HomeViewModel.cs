@@ -73,10 +73,10 @@
 
             var addPhoto = new PhotoModel
             {
-                ImageId = 03062024,
+                ImageId = Guid.NewGuid(),
                 ImageName = "imgname_nikka0306202",
                 ImageData = "img_datanikka03062024",
-                Location = location.Longitude + "," + location.Latitude,
+                Location = location.Latitude + "," + location.Longitude,
                 User = "mmaquino",
                 ImageType = "png",
                 ImageView = imagedata,
