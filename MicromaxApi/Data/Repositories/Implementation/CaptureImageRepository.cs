@@ -2,7 +2,6 @@
 using MicromaxApi.Context;
 using MicromaxApi.Data.Entity;
 using MicromaxApi.Data.Repositories.Interface;
-using MicromaxApi.Model;
 
 namespace MicromaxApi.Data.Repositories.Implementation
 {
@@ -17,39 +16,18 @@ namespace MicromaxApi.Data.Repositories.Implementation
 
         public async Task<List<ImageEntity>> GetImages(string userid)
         {
-            try
-            {
-                var sql = "select ImageId, ImageName, ImageData, Location, User, DateCreated, ImageView, ImageType from tblImages where [User] = @UserId";
-
-                using (var connection = _context.CreateConnection())
-                {
-                    var result = await connection.QueryAsync<ImageEntity>(sql, new { UserId = userid });
-                    return result.ToList();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred: {ex}");
-                throw;
-            }
+            var sql = "select ImageId, ImageName, ImageData, Location, [User], DateCreated, ImageType from tblImages where [User] = @UserId";
+            using var connection = _context.CreateConnection();
+            var result = await connection.QueryAsync<ImageEntity>(sql, new { UserId = userid });
+            return result.ToList();
         }
 
         public async Task<bool> SaveImages(ImageEntity entity)
         {
-            try
-            {
-                var sql = "insert into tblImages (ImageId, ImageName, ImageData, DateCreated, Location, [User], ImageView, ImageType) values (@imageId, @imageName, @imageData, @dateCreated, @location, @user, @imageView, @imageType)";
-                using (var connection = _context.CreateConnection())
-                {
-                    var count = await connection.ExecuteAsync(sql, entity);
-                    return count > 0;
-
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+                var sql = "insert into tblImages (ImageName, ImageData, DateCreated, Location, [User], ImageType) values (@imageName, @imageData, @dateCreated, @location, @user, @imageType)";
+                using var connection = _context.CreateConnection();
+                var count = await connection.ExecuteAsync(sql, entity);
+                return count > 0;
         }
     }
 }

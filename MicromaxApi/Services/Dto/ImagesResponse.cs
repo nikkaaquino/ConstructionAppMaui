@@ -6,13 +6,10 @@ namespace MicromaxApi.Services.Dto
     public class ImagesResponse
     {
         [JsonProperty]
-        public Guid ImageId { get; set; }
-
-        [JsonProperty]
         public string ImageName { get; set; }
 
-        [JsonProperty]
-        public string ImageData { get; set; }
+        //[JsonProperty]
+        //public byte[] ImageData { get; set; }
 
         [JsonProperty]
         public DateTime? DateCreated { get; set; }
@@ -23,13 +20,8 @@ namespace MicromaxApi.Services.Dto
         [JsonProperty]
         public string Location { get; set; }
 
-        [JsonProperty]
-        public string ImageView { get; set; }
 
         [JsonProperty]
         public string ImageType { get; set; }
-
-        [JsonProperty]
-        public string ImageUrl { get; set; }
     }
 }

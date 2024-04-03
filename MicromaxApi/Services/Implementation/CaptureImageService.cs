@@ -4,9 +4,6 @@ using MicromaxApi.Model;
 using MicromaxApi.Services.Config;
 using MicromaxApi.Services.Dto;
 using MicromaxApi.Services.Interface;
-using System.Runtime.InteropServices;
-using System.Text;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace MicromaxApi.Services.Implementation
 {
@@ -28,24 +25,20 @@ namespace MicromaxApi.Services.Implementation
 
                 var response = result.Select(x => new ImagesResponse
                 {
-                    ImageId = x.ImageId,
                     ImageName = x.ImageName,
-                    ImageData = x.ImageData,
-                    Location = x.Location,
-                    DateCreated = x.DateCreated,
-                    User = userid,
-                    //ImageView = x.ImageView,
+                    //ImageData = x.ImageData,
                     ImageType = x.ImageType,
-                    ImageUrl = "data:image/" + x.ImageType + ";base64," + Convert.ToBase64String(x.ImageView)
+                    Location = x.Location,
+                    User = userid,
+                    DateCreated = x.DateCreated,                    
                 }).ToList();
 
                 return response;
 
-
             }
             catch (Exception ex)
             {
-                Validation.Add("errors", "Something went wrong");
+                Validation.Add("errors", ex.Message);
                 return null;
             }
         }
@@ -54,20 +47,15 @@ namespace MicromaxApi.Services.Implementation
         {
             try
             {
-
                 var saveEntity = new ImageEntity
                 {
-                    ImageId = model.ImageId,
-                    ImageName = model.ImageName,
+                    ImageName = Guid.NewGuid()+"_photo.jpg",
                     ImageData = model.ImageData,
+                    ImageType = model.ImageType,
                     Location = model.Location,
                     User = model.User,
-                    DateCreated = DateTime.Now,
-                    ImageView = model.ImageView,
-                    ImageType = model.ImageType,
-
+                    DateCreated = DateTime.Now
                 };
-
 
                 var isSaved = await _repo.SaveImages(saveEntity);
                 if (!isSaved)
@@ -79,7 +67,7 @@ namespace MicromaxApi.Services.Implementation
             }
             catch (Exception ex)
             {
-                Validation.Add("errors", "Something went wrong. Please try again in a while");
+                Validation.Add("errors", ex.Message);
                 return false;
             }
         }

@@ -3,7 +3,6 @@ using MicromaxApi.Model;
 using MicromaxApi.Services.Config;
 using MicromaxApi.Services.Dto;
 using MicromaxApi.Services.Interface;
-using Microsoft.IdentityModel.Tokens;
 using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.Crypto.Engines;
 using Org.BouncyCastle.Crypto.Parameters;
@@ -37,7 +36,7 @@ namespace MicromaxApi.Services.Implementation
             }
             catch (Exception ex)
             {
-                Validation.Add("errors", "Something went wrong");
+                Validation.Add("errors", ex.Message);
                 return null;
             }
         }
