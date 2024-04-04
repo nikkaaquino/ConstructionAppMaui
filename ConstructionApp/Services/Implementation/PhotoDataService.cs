@@ -2,7 +2,6 @@
 {
     public class PhotoDataService : IPhotoDataService
     {
-
         private readonly HttpClient _httpClient;
         private readonly string _baseAddress;
         private readonly string _url;

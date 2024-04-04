@@ -10,7 +10,7 @@
         public LoginDataService()
         {
             _httpClient = new HttpClient();
-            _httpClient.Timeout = TimeSpan.FromSeconds(300);
+            _httpClient.Timeout = TimeSpan.FromSeconds(5);
             _baseAddress = Constants.BASE_API_URL;
             _url = $"{_baseAddress}/api/login/AuthenticateUser";
 

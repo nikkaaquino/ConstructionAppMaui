@@ -9,7 +9,7 @@
              Title="HomePage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Logout" 
-                     Command="{Binding TapCommand}"/>
+                     Command="{Binding LogoutCommand}"/>
     </ContentPage.ToolbarItems>
 
     <ScrollView>

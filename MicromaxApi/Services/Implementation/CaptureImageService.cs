@@ -49,7 +49,7 @@ namespace MicromaxApi.Services.Implementation
             {
                 var saveEntity = new ImageEntity
                 {
-                    ImageName = Guid.NewGuid()+"_photo.jpg",
+                    ImageName = model.ImageName,
                     ImageData = model.ImageData,
                     ImageType = model.ImageType,
                     Location = model.Location,

@@ -2,9 +2,8 @@
 {
     public partial class HomeViewModel : ObservableObject
     {
-        [ObservableProperty] public int _imgId;
         [ObservableProperty] public string _imgName;
-        [ObservableProperty] public string _imgData;
+        [ObservableProperty] public byte[] _imgData;
         [ObservableProperty] public string _loc;
         [ObservableProperty] public string _owner;
         [ObservableProperty] public byte[] _imgView;
@@ -15,7 +14,7 @@
 
 
         private string photoPath;
-        
+
         public string CompletePhotoPath
         {
             get => photoPath;
@@ -46,61 +45,59 @@
         }
 
         [RelayCommand]
-        async Task Tap()
+        async static Task Logout()
         {
-            //TODO: refresh page without details
             await Shell.Current.GoToAsync("//LoginPage");
-
         }
 
+        [RelayCommand]
         public async Task<String> LoadPhotoAsync(FileResult photo)
         {
-            var stream = photo.OpenReadAsync().Result;
+                var stream = photo.OpenReadAsync().Result;
 
-            byte[] imagedata;
+                byte[] imagedata;
 
-            using (MemoryStream ms = new MemoryStream())
-            {
-                stream.CopyTo(ms);
-                imagedata = ms.ToArray();
-            }
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    stream.CopyTo(ms);
+                    imagedata = ms.ToArray();
+                }
 
-            var location =  await geolocation.GetLocationAsync(new GeolocationRequest
+                var location = await geolocation.GetLocationAsync(new GeolocationRequest
                 {
                     DesiredAccuracy = GeolocationAccuracy.Medium,
                     Timeout = TimeSpan.FromSeconds(30)
-            });
+                });
 
-            var addPhoto = new PhotoModel
-            {
-                ImageId = Guid.NewGuid(),
-                ImageName = "imgname_nikka0306202",
-                ImageData = "img_datanikka03062024",
-                Location = location.Latitude + "," + location.Longitude,
-                User = "mmaquino",
-                ImageType = "png",
-                ImageView = imagedata,
-            };
+                var empfilename = Guid.NewGuid() + "_photo.jpg";
 
-            await photoDataService.AddPhotoAsync(addPhoto);
+                var addPhoto = new PhotoModel
+                {
+                    ImageName = empfilename,
+                    ImageData = imagedata,
+                    Location = location.Latitude + "," + location.Longitude,
+                    User = "mmaquino",
+                    ImageType = photo.ContentType,
+                };
 
-            var folderpath = Path.Combine(FileSystem.AppDataDirectory, "Photo");
-            if (!File.Exists(folderpath))
-            {
-                Directory.CreateDirectory(folderpath);
-            }
+                await photoDataService.AddPhotoAsync(addPhoto);
 
-            var empfilename = Guid.NewGuid() + "_photo.jpg";
+                var folderpath = Path.Combine(FileSystem.AppDataDirectory, "Photo");
+                if (!File.Exists(folderpath))
+                {
+                    Directory.CreateDirectory(folderpath);
+                }
 
-            var newfile = Path.Combine(folderpath, empfilename);// Complete Path of the photo
+                var newfile = Path.Combine(folderpath, empfilename);
 
-            using (var stream2 = new MemoryStream(imagedata))
-            using (var newstream = File.OpenWrite(newfile))
-            {
-                await stream2.CopyToAsync(newstream);
-            }
+                using (var stream2 = new MemoryStream(imagedata))
+                using (var newstream = File.OpenWrite(newfile))
+                {
+                    await stream2.CopyToAsync(newstream);
+                }
 
-            return newfile;
+                return newfile;
+
         }
 
 
@@ -111,7 +108,7 @@
             {
                 var photo = await MediaPicker.CapturePhotoAsync();
                 CompletePhotoPath = await LoadPhotoAsync(photo);
-                 
+
                 Console.WriteLine("Photo Captured" + CompletePhotoPath);
             }
             catch (Exception ex)

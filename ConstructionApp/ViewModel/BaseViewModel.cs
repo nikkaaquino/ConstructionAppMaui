@@ -1,4 +1,6 @@
-﻿namespace ConstructionApp.ViewModel
+﻿using Microsoft.Maui.Devices.Sensors;
+
+namespace ConstructionApp.ViewModel
 {
     public partial class BaseViewModel : ObservableObject
     {
@@ -10,6 +12,13 @@
         [ObservableProperty]
         string title;
 
-        public bool IsNotBusy => IsBusy;
+        public bool IsNotBusy => IsBusy;       
+
+        [RelayCommand]
+        static async Task Logout()
+        {
+            await Shell.Current.GoToAsync("//LoginPage");
+
+        }
     }
 }

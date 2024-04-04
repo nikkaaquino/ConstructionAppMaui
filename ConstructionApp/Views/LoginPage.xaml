@@ -36,7 +36,7 @@
                            PlaceholderColor="#454545" IsPassword="True"/>
 
                 </Grid>
-                <ActivityIndicator HeightRequest="50" WidthRequest="50" IsRunning="{Binding IsRunning}" IsVisible="{Binding IsRunning}"></ActivityIndicator>
+                <ActivityIndicator HeightRequest="50" WidthRequest="50" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsNotBusy}"></ActivityIndicator>
                 
             </StackLayout>
 
