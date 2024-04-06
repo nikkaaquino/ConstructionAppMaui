@@ -6,6 +6,7 @@
     <members>
         <member name="T:ConstructionApp.ViewModel.BaseViewModel">
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:ConstructionApp.ViewModel.BaseViewModel.IsBusy">
             <inheritdoc cref="F:ConstructionApp.ViewModel.BaseViewModel.isBusy"/>
@@ -13,29 +14,57 @@
         <member name="P:ConstructionApp.ViewModel.BaseViewModel.Title">
             <inheritdoc cref="F:ConstructionApp.ViewModel.BaseViewModel.title"/>
         </member>
+        <member name="F:ConstructionApp.ViewModel.BaseViewModel.logoutCommand">
+            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.BaseViewModel.LogoutCommand"/>.</summary>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.BaseViewModel.LogoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.BaseViewModel.Logout"/>.</summary>
+        </member>
         <member name="T:ConstructionApp.ViewModel.HomeViewModel">
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
-        <member name="F:ConstructionApp.ViewModel.HomeViewModel.tapCommand">
-            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.HomeViewModel.TapCommand"/>.</summary>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.ImgName">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._imgName"/>
         </member>
-        <member name="P:ConstructionApp.ViewModel.HomeViewModel.TapCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.HomeViewModel.Tap"/>.</summary>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.ImgData">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._imgData"/>
         </member>
-        <member name="F:ConstructionApp.ViewModel.HomeViewModel.savePhotoCommand">
-            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.HomeViewModel.SavePhotoCommand"/>.</summary>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.Loc">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._loc"/>
         </member>
-        <member name="P:ConstructionApp.ViewModel.HomeViewModel.SavePhotoCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.HomeViewModel.SavePhoto"/>.</summary>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.ImgView">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._imgView"/>
         </member>
-        <member name="F:ConstructionApp.ViewModel.HomeViewModel.captureCommand">
-            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.HomeViewModel.CaptureCommand"/>.</summary>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.ImgType">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._imgType"/>
         </member>
-        <member name="P:ConstructionApp.ViewModel.HomeViewModel.CaptureCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.HomeViewModel.Capture"/>.</summary>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.CameraView">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._cameraView"/>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.ImgSrc">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel._imgSrc"/>
+        </member>
+        <member name="F:ConstructionApp.ViewModel.HomeViewModel.logoutCommand">
+            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.HomeViewModel.LogoutCommand"/>.</summary>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.LogoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.HomeViewModel.Logout"/>.</summary>
+        </member>
+        <member name="F:ConstructionApp.ViewModel.HomeViewModel.loadPhotoCommand">
+            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.HomeViewModel.LoadPhotoCommand"/>.</summary>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.LoadPhotoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.HomeViewModel.LoadPhotoAsync(Microsoft.Maui.Storage.FileResult)"/>.</summary>
+        </member>
+        <member name="F:ConstructionApp.ViewModel.HomeViewModel.capturePhotoCommand">
+            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.HomeViewModel.CapturePhotoCommand"/>.</summary>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.CapturePhotoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.HomeViewModel.CapturePhoto"/>.</summary>
         </member>
         <member name="F:ConstructionApp.ViewModel.HomeViewModel.goToPhotoDetailsCommand">
             <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.HomeViewModel.GoToPhotoDetailsCommand"/>.</summary>
@@ -71,6 +100,27 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ImgName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ImgName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ImgData">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ImgData" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Loc">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Loc" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ImgView">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ImgView" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ImgType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ImgType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CameraView">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CameraView" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ImgSrc">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ImgSrc" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Username">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Username" generated properties.</summary>
         </member>
@@ -91,6 +141,27 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ImgName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ImgName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ImgData">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ImgData" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Loc">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Loc" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ImgView">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ImgView" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ImgType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ImgType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CameraView">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CameraView" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ImgSrc">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ImgSrc" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Username">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Username" generated properties.</summary>

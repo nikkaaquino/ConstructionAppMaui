@@ -3,21 +3,13 @@
     public class LoginDataService : ILoginDataService
     {
         private readonly HttpClient _httpClient;
-        private readonly string _baseAddress;
         private readonly string _url;
-        private readonly JsonSerializerOptions _jsonSerializeOptions;
 
         public LoginDataService()
         {
             _httpClient = new HttpClient();
-            _httpClient.Timeout = TimeSpan.FromSeconds(300);
-            _baseAddress = DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5003" : "http://localhost:5003";
-            _url = $"{_baseAddress}/api/login/AuthenticateUser";
-
-            _jsonSerializeOptions = new JsonSerializerOptions
-            {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-            };
+            _httpClient.Timeout = TimeSpan.FromSeconds(5);
+            _url = $"{Constants.BASE_API_URL}/login/AuthenticateUser";
         }
 
         public async Task<LoginModel> LoginUser(string username, string password)

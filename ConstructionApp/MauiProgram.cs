@@ -1,4 +1,6 @@
-﻿namespace ConstructionApp;
+﻿using ConstructionApp.Services.Interface;
+
+namespace ConstructionApp;
 
 public static class MauiProgram
 {
@@ -19,7 +21,6 @@ public static class MauiProgram
 
         builder.Services.AddSingleton<ILoginDataService, LoginDataService>();
         builder.Services.AddSingleton<IPhotoDataService, PhotoDataService>();
-        builder.Services.AddSingleton<PhotoDataService>();
         builder.Services.AddTransient<LoginPage>();
         builder.Services.AddSingleton<HomePage>();
         builder.Services.AddSingleton<HomeViewModel>();
