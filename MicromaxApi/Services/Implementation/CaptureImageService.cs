@@ -4,6 +4,8 @@ using MicromaxApi.Model;
 using MicromaxApi.Services.Config;
 using MicromaxApi.Services.Dto;
 using MicromaxApi.Services.Interface;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MicromaxApi.Services.Implementation
 {
@@ -26,7 +28,7 @@ namespace MicromaxApi.Services.Implementation
                 var response = result.Select(x => new ImagesResponse
                 {
                     ImageName = x.ImageName,
-                    //ImageData = x.ImageData,
+                    ImageData = x.ImageData,
                     ImageType = x.ImageType,
                     Location = x.Location,
                     User = userid,

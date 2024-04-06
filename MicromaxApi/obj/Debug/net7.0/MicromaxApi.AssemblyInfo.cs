@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MicromaxApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc23ece08fb53bf594e483fa2e5565e650686a18")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f3efc3b34cb89cd4f0a34a0027517b93e1cd5c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("MicromaxApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MicromaxApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

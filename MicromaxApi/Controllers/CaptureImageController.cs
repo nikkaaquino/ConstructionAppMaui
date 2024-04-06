@@ -27,11 +27,13 @@ namespace MicromaxApi.Controllers
                 var result = await _imageService.GetImages(userid);
                 if (_imageService.IsValid)
                 {
-                    var response = new ApiResponse<List<ImagesResponse>>
-                    {
-                        Data = result.ToList(),
-                    };
-                    return Ok(response);
+                    //var response = new ApiResponse<List<ImagesResponse>>
+                    //{
+                    //   Data = result.ToList(),
+                    //};
+                    //return Ok(response);
+
+                    return Ok(result.ToList());
                 }
                 else
                 {

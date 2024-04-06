@@ -5,6 +5,9 @@
         private readonly HttpClient _httpClient;
         private readonly string _url;
         private readonly JsonSerializerOptions _jsonSerializeOptions;
+
+        List<PhotoModel> _photos;
+
         public PhotoDataService()
         {
             _httpClient = new HttpClient();
@@ -21,9 +24,19 @@
             throw new NotImplementedException();
         }
 
-        public Task<List<PhotoModel>> GetAllPhotosAsync(string username)
+        public async Task<List<PhotoModel>> GetAllPhotosAsync(string username)
         {
-            throw new NotImplementedException();
+            if (_photos?.Count > 0)
+                return _photos;
+
+            var response = await _httpClient.GetAsync($"{_url}/image/image-list?UserId={username}");
+            if (response.IsSuccessStatusCode)
+            {
+                _photos = await response.Content.ReadFromJsonAsync(PhotoModelContext.Default.ListPhotoModel);
+            }
+
+            return _photos;
+            
         }
 
         public async Task AddPhotoAsync(PhotoModel model)
