@@ -26,8 +26,8 @@
 
         public async Task<List<PhotoModel>> GetAllPhotosAsync(string username)
         {
-            if (_photos?.Count > 0)
-                return _photos;
+            //if (_photos?.Count > 0)
+            //    return _photos;
 
             var response = await _httpClient.GetAsync($"{_url}/image/image-list?UserId={username}");
             if (response.IsSuccessStatusCode)
