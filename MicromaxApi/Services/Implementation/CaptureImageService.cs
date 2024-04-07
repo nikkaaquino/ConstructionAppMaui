@@ -30,7 +30,8 @@ namespace MicromaxApi.Services.Implementation
                     ImageType = x.ImageType,
                     Location = x.Location,
                     User = userid,
-                    DateCreated = x.DateCreated,                    
+                    DateCreated = x.DateCreated,
+                    ImagePath = x.ImagePath,
                 }).ToList();
 
                 return response;
@@ -54,7 +55,8 @@ namespace MicromaxApi.Services.Implementation
                     ImageType = model.ImageType,
                     Location = model.Location,
                     User = model.User,
-                    DateCreated = DateTime.Now
+                    DateCreated = DateTime.Now,
+                    ImagePath = model.ImagePath,
                 };
 
                 var isSaved = await _repo.SaveImages(saveEntity);

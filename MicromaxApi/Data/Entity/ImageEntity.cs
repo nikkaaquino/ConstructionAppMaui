@@ -11,6 +11,8 @@ namespace MicromaxApi.Data.Entity
         public string Location { get; set; }
         public string User { get; set; }
         public DateTime? DateCreated { get; set; }
+
+        public string ImagePath { get; set; }
     }
 }
 

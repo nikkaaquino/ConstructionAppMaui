@@ -3,7 +3,7 @@
     public partial class HomeViewModel : BaseViewModel
     {
         public ObservableCollection<PhotoModel> Photos { get; } = new();
-        
+
         [ObservableProperty]
         string owner = "user";
 
@@ -89,10 +89,8 @@
             {
                 IsBusy = true;
                 var photo = await MediaPicker.CapturePhotoAsync();
-                CompletePhotoPath = await LoadPhotoAsync(photo);
+                await LoadPhotoAsync(photo);
                 await Shell.Current.DisplayAlert("Information", "Successfully added!", "OK");
-
-                Console.WriteLine("Photo Captured" + CompletePhotoPath);
             }
             catch (Exception ex)
             {
@@ -107,8 +105,10 @@
         }
 
         [RelayCommand]
-        public async Task<String> LoadPhotoAsync(FileResult photo)
+        public async Task LoadPhotoAsync(FileResult photo)
         {
+            try {
+
                 var stream = photo.OpenReadAsync().Result;
 
                 byte[] imagedata;
@@ -127,16 +127,7 @@
 
                 var empfilename = Guid.NewGuid() + "_photo.jpg";
 
-                var addPhoto = new PhotoModel
-                {
-                    ImageName = empfilename,
-                    ImageData = imagedata,
-                    Location = location.Latitude + "," + location.Longitude,
-                    User = "user", //update this to current user
-                    ImageType = photo.ContentType,
-                };
 
-                await photoDataService.AddPhotoAsync(addPhoto);
 
                 var folderpath = Path.Combine(FileSystem.AppDataDirectory, "Photo");
                 if (!File.Exists(folderpath))
@@ -152,11 +143,26 @@
                     await stream2.CopyToAsync(newstream);
                 }
 
-                return newfile;
+                var addPhoto = new PhotoModel
+                {
+                    ImageName = empfilename,
+                    ImageData = imagedata,
+                    Location = location.Latitude + "," + location.Longitude,
+                    User = "user", //change to current user
+                    ImageType = photo.ContentType,
+                    ImagePath = newfile,
+                };
+
+                await photoDataService.AddPhotoAsync(addPhoto);
+            }
+            catch(Exception ex) {
+                Debug.WriteLine($"Unable to capture photo: {ex.Message}");
+                await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+            }            
 
         }
 
 
-        
+
     }
 }

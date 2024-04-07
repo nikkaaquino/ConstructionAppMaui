@@ -10,5 +10,13 @@
         public string User { get; set; }
       
         public string ImageType { get; set; }
+
+        public string ImagePath { get; set; }
+    }
+
+    [JsonSerializable(typeof(List<PhotoModel>))]
+    internal sealed partial class PhotoContext : JsonSerializerContext
+    {
+
     }
 }

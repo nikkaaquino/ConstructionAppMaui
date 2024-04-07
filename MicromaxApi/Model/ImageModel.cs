@@ -7,5 +7,6 @@
         public string ImageType { get; set; }
         public string Location { get; set; }
         public string User { get; set; }
+        public string ImagePath { get; set; }
     }
 }

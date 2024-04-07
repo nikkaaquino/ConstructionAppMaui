@@ -15,24 +15,21 @@
 
             <StackLayout Margin="0,50">
                 <Label FontSize="32" Text="Welcome"/>
-                <Label FontFamily="OpenSansRegular" TextColor="{StaticResource LabelText}" 
-                       FontSize="16" Text="Sign in to continue"/>
+                <Label FontFamily="OpenSansRegular" Style="{StaticResource SmallLabel}" Text="Sign in to continue"/>
             </StackLayout>
 
             <StackLayout>
-                <Label FontFamily="OpenSansRegular" TextColor="{StaticResource LabelText}" 
-                       FontSize="16" FontAttributes="Bold" Text="Username"/>
+                <Label FontFamily="OpenSansRegular" Style="{StaticResource SmallLabel}" FontAttributes="Bold" Text="Username"/>
                 <Grid Margin="0,5">
                     <Entry Text="{Binding Username}" BackgroundColor="Transparent" Placeholder="Enter username" 
-                           TextColor="Black" Margin="5,0"
+                           Style="{StaticResource SmallLabel}"  Margin="5,0"
                            PlaceholderColor="#454545" />
                 </Grid>
 
-                <Label FontFamily="OpenSansRegular" TextColor="{StaticResource LabelText}" 
-                       FontSize="16" FontAttributes="Bold" Text="Password"/>
+                <Label Style="{StaticResource SmallLabel}" Text="Password"/>
                 <Grid Margin="0,5">
                     <Entry Text="{Binding Password}" BackgroundColor="Transparent" Placeholder="Enter password" 
-                           TextColor="Black" Margin="5,0"
+                           Style="{StaticResource SmallLabel}"  Margin="5,0"
                            PlaceholderColor="#454545" IsPassword="True"/>
 
                 </Grid>
@@ -41,7 +38,7 @@
             </StackLayout>
 
             <Button Command="{Binding LoginCommand}" Margin="0,15" BackgroundColor="{StaticResource LightBackground}"
-                    Text="Sign in" TextColor="{StaticResource LabelText}" FontFamily="OpenSansBold"/>
+                    Text="Sign in" Style="{StaticResource SmallLabel}"/>
             <Label x:Name="MessageLabel" FontSize="18" TextColor="Red" HorizontalOptions="Center" IsVisible="False"/>
         </StackLayout>
     </Grid>
