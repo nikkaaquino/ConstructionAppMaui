@@ -4,8 +4,6 @@ using MicromaxApi.Model;
 using MicromaxApi.Services.Config;
 using MicromaxApi.Services.Dto;
 using MicromaxApi.Services.Interface;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MicromaxApi.Services.Implementation
 {

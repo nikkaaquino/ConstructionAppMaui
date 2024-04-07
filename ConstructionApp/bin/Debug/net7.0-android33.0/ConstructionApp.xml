@@ -4,45 +4,6 @@
         <name>ConstructionApp</name>
     </assembly>
     <members>
-        <member name="P:ConstructionApp.Model.PhotoModelContext.String">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ConstructionApp.Model.PhotoModelContext.ByteArray">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ConstructionApp.Model.PhotoModelContext.PhotoModel">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ConstructionApp.Model.PhotoModelContext.ListPhotoModel">
-            <summary>
-            Defines the source generated JSON serialization contract metadata for a given type.
-            </summary>
-        </member>
-        <member name="P:ConstructionApp.Model.PhotoModelContext.Default">
-            <summary>
-            The default <see cref="T:System.Text.Json.Serialization.JsonSerializerContext"/> associated with a default <see cref="T:System.Text.Json.JsonSerializerOptions"/> instance.
-            </summary>
-        </member>
-        <member name="P:ConstructionApp.Model.PhotoModelContext.GeneratedSerializerOptions">
-            <summary>
-            The source-generated options associated with this context.
-            </summary>
-        </member>
-        <member name="M:ConstructionApp.Model.PhotoModelContext.#ctor">
-            <inheritdoc/>
-        </member>
-        <member name="M:ConstructionApp.Model.PhotoModelContext.#ctor(System.Text.Json.JsonSerializerOptions)">
-            <inheritdoc/>
-        </member>
-        <member name="M:ConstructionApp.Model.PhotoModelContext.GetTypeInfo(System.Type)">
-            <inheritdoc/>
-        </member>
         <member name="T:ConstructionApp.ViewModel.BaseViewModel">
             <inheritdoc/>
             <inheritdoc/>

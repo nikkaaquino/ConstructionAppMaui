@@ -87,12 +87,14 @@
             {
                 var photo = await MediaPicker.CapturePhotoAsync();
                 CompletePhotoPath = await LoadPhotoAsync(photo);
+                await Shell.Current.DisplayAlert("Information", "Successfully added!", "OK");
 
                 Console.WriteLine("Photo Captured" + CompletePhotoPath);
             }
             catch (Exception ex)
             {
-                Console.Write(ex.ToString());
+                Debug.WriteLine($"Unable to capture photo: {ex.Message}");
+                await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
             }
         }
 

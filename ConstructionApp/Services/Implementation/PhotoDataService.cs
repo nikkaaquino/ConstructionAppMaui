@@ -32,7 +32,8 @@
             var response = await _httpClient.GetAsync($"{_url}/image/image-list?UserId={username}");
             if (response.IsSuccessStatusCode)
             {
-                _photos = await response.Content.ReadFromJsonAsync(PhotoModelContext.Default.ListPhotoModel);
+                string content = await response.Content.ReadAsStringAsync();
+                _photos = JsonSerializer.Deserialize<List<PhotoModel>>(content, _jsonSerializeOptions);
             }
 
             return _photos;
