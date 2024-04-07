@@ -21,10 +21,14 @@ public static class MauiProgram
 
         builder.Services.AddSingleton<ILoginDataService, LoginDataService>();
         builder.Services.AddSingleton<IPhotoDataService, PhotoDataService>();
+
         builder.Services.AddTransient<LoginPage>();
         builder.Services.AddSingleton<HomePage>();
+        builder.Services.AddSingleton<MainPage>();
+
         builder.Services.AddSingleton<HomeViewModel>();
         builder.Services.AddSingleton<LoginViewModel>();
+        builder.Services.AddSingleton<MainViewModel>();
 
         return builder.Build();
     }

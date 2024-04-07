@@ -26,7 +26,7 @@ namespace MicromaxApi.Services.Implementation
                 var response = result.Select(x => new ImagesResponse
                 {
                     ImageName = x.ImageName,
-                    //ImageData = x.ImageData,
+                    ImageData = x.ImageData,
                     ImageType = x.ImageType,
                     Location = x.Location,
                     User = userid,

@@ -1,6 +1,4 @@
-﻿using Microsoft.Maui.Devices.Sensors;
-
-namespace ConstructionApp.ViewModel
+﻿namespace ConstructionApp.ViewModel
 {
     public partial class BaseViewModel : ObservableObject
     {

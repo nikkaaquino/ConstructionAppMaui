@@ -1,16 +1,12 @@
 ﻿namespace ConstructionApp.ViewModel
 {
-    public partial class HomeViewModel : ObservableObject
+    public partial class HomeViewModel : BaseViewModel
     {
-        [ObservableProperty] public string _imgName;
-        [ObservableProperty] public byte[] _imgData;
-        [ObservableProperty] public string _loc;
-        [ObservableProperty] public byte[] _imgView;
-        [ObservableProperty] public string _imgType;
-
-        [ObservableProperty] public CameraView _cameraView;
-        [ObservableProperty] ImageSource _imgSrc;
-
+        public ObservableCollection<PhotoModel> Photos { get; } = new();
+        [ObservableProperty]
+        bool isRefreshing;
+        [ObservableProperty]
+        string owner = "user";
 
         private string photoPath;
 
@@ -34,22 +30,72 @@
 
         IPhotoDataService photoDataService;
         ILoginDataService loginDataService;
+        IConnectivity connectivity;
         IGeolocation geolocation;
         IMap map;
 
-        public HomeViewModel(IPhotoDataService photoDataService, ILoginDataService loginDataService, IGeolocation geolocation, IMap map)
+        public HomeViewModel(IPhotoDataService photoDataService, ILoginDataService loginDataService, IGeolocation geolocation, IMap map, IConnectivity connectivity)
         {
             this.photoDataService = photoDataService;
             this.loginDataService = loginDataService;
             this.geolocation = geolocation;
             this.map = map;
+            this.connectivity = connectivity;
         }
 
         [RelayCommand]
-        async static Task Logout()
+        async Task GetPhotosAsync()
         {
-            //remove currrent session for image data on homepage
-            await Shell.Current.GoToAsync("//LoginPage");
+            if (IsBusy)
+                return;
+
+            try
+            {
+                if (connectivity.NetworkAccess != NetworkAccess.Internet)
+                {
+                    await Shell.Current.DisplayAlert("No Connectivity",
+                        $"Please check internet and try again.", "Ok");
+                }
+                IsBusy = true;
+
+                var photos = await photoDataService.GetAllPhotosAsync(Owner);
+
+                if (Photos.Count != 0)
+                    Photos.Clear();
+
+                foreach (var photo in photos)
+                    Photos.Add(photo);
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Unable to get photos: {ex.Message}");
+                await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+            }
+            finally
+            {
+                IsBusy = false;
+                IsRefreshing = false;
+            }
+
+        }
+
+        [RelayCommand]
+        async Task CapturePhoto()
+        {
+            try
+            {
+                var photo = await MediaPicker.CapturePhotoAsync();
+                CompletePhotoPath = await LoadPhotoAsync(photo);
+                await Shell.Current.DisplayAlert("Information", "Successfully added!", "OK");
+
+                Console.WriteLine("Photo Captured" + CompletePhotoPath);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Unable to capture photo: {ex.Message}");
+                await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+            }
         }
 
         [RelayCommand]
@@ -103,26 +149,6 @@
         }
 
 
-        [RelayCommand]
-        async Task CapturePhoto()
-        {
-            try
-            {
-                var photo = await MediaPicker.CapturePhotoAsync();
-                CompletePhotoPath = await LoadPhotoAsync(photo);
-
-                Console.WriteLine("Photo Captured" + CompletePhotoPath);
-            }
-            catch (Exception ex)
-            {
-                Console.Write(ex.ToString());
-            }
-        }
-
-        [RelayCommand]
-        async Task GoToPhotoDetails()
-        {
-            await Shell.Current.GoToAsync($"{nameof(MainPage)}");
-        }
+        
     }
 }

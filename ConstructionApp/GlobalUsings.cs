@@ -12,3 +12,6 @@ global using ConstructionApp.Services.Implementation;
 global using ConstructionApp.Services.Interface;
 global using System.Text;
 global using ConstructionApp.Helper;
+global using System.Text.Json.Serialization;
+global using System.Net.Http.Json;
+global using System.Collections.ObjectModel;
