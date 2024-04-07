@@ -4,45 +4,36 @@
     {
         private readonly HttpClient _httpClient;
         private readonly string _url;
+        private readonly JsonSerializerOptions _jsonSerializeOptions;
+        LoginModel _userinfo;
+        ErrorMessage _error;
 
         public LoginDataService()
         {
             _httpClient = new HttpClient();
             _httpClient.Timeout = TimeSpan.FromSeconds(5);
             _url = $"{Constants.BASE_API_URL}/login/AuthenticateUser";
+            _jsonSerializeOptions = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            };
         }
 
         public async Task<LoginModel> LoginUser(string username, string password)
         {
-            if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
+            var response = await _httpClient.GetAsync($"{_url}?UserId={username}&Password={password}");
+            string content = await response.Content.ReadAsStringAsync();
+            if (response.IsSuccessStatusCode)
+            {                
+                _userinfo = JsonSerializer.Deserialize<LoginModel>(content, _jsonSerializeOptions);
+            }
+            else
             {
-                Debug.WriteLine("----> No Internet Access ....");
-                return null;
-            }
-            try
-            {       
-                HttpResponseMessage response = await _httpClient.GetAsync($"{_url}?UserId={username}&Password={password}");
-
-                if (response.IsSuccessStatusCode)
-                {
-                    string content = await response.Content.ReadAsStringAsync();
-
-                    var userInfo = JsonSerializer.Deserialize<LoginModel>(content);
-                    return userInfo;
-                }
-                else
-                {
-                    Debug.WriteLine("---> Non Http 2xx response");
-                    return null;
-                }
-
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Oops exception: {ex.Message}");
+                _error = JsonSerializer.Deserialize<ErrorMessage>(content, _jsonSerializeOptions);
+                throw new Exception(_error.Errors);
             }
 
-            return null;
+            return _userinfo;
         }
     }
 }

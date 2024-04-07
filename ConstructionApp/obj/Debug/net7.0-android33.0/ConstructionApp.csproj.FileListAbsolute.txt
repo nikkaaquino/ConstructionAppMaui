@@ -2014,14 +2014,6 @@ C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\Flurl.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\Flurl.Http.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\Newtonsoft.Json.dll
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\typemaps.x86_64.ll
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\environment.x86_64.ll
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\compressed_assemblies.x86_64.ll
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\typemaps.x86_64.o
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\environment.x86_64.o
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\compressed_assemblies.x86_64.o
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\jni_remap.x86_64.o
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\app_shared_libraries\x86_64\libxamarin-app.so
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\mscorlib.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\System.Collections.Concurrent.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\System.Data.Common.dll
@@ -2035,3 +2027,11 @@ C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\System.Runtime.Extensions.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\System.Runtime.Serialization.Formatters.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\assets\System.Xml.dll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\typemaps.arm64-v8a.ll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\environment.arm64-v8a.ll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\compressed_assemblies.arm64-v8a.ll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\typemaps.arm64-v8a.o
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\environment.arm64-v8a.o
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\compressed_assemblies.arm64-v8a.o
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\android\jni_remap.arm64-v8a.o
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net7.0-android33.0\app_shared_libraries\arm64-v8a\libxamarin-app.so

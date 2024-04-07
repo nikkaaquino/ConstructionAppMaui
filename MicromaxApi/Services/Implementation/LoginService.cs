@@ -58,8 +58,8 @@ namespace MicromaxApi.Services.Implementation
                 }
                 else if (convertedPassword != user.UsrPassword)
                 {
-                    Validation.Add("errors", $"Invalid Password with ID: {model.UserId}");
-                    Log.Warning($"Invalid Password with ID: {model.UserId}");
+                    Validation.Add("errors", $"Invalid Password for ID: {model.UserId}");
+                    Log.Warning($"Invalid Password for ID: {model.UserId}");
                     return null;
                 }
                 else

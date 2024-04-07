@@ -19,24 +19,31 @@ namespace ConstructionApp.ViewModel
         [RelayCommand]
         async Task Login()
         {
-            if (Username == null || Password == null)
-            {
-                await Shell.Current.DisplayAlert("Warning", "Please input username and password", "Ok");
+            if (IsBusy)
                 return;
-            }
 
-            LoginModel userinfo = await loginService.LoginUser(Username, Password);
-            if (userinfo != null)
-            {
-                Username = string.Empty;
-                Password = string.Empty;
+            try {
+                IsBusy = true;
 
-                await Shell.Current.GoToAsync(nameof(HomePage));
+                LoginModel userinfo = await loginService.LoginUser(Username, Password);
+                if (userinfo != null)
+                {
+                    Username = string.Empty;
+                    Password = string.Empty;
+
+                    await Shell.Current.GoToAsync(nameof(HomePage));
+                }
             }
-            else
+            catch(Exception ex) {
+                Debug.WriteLine($"Unable to Login: {ex.Message}");
+                await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+            }
+            finally
             {
-                await Shell.Current.DisplayAlert("Warning", "Invalid Username and Password", "Ok");
-            }
+                IsBusy = false;
+                IsRefreshing = false;
+            }         
+           
 
         }
     }

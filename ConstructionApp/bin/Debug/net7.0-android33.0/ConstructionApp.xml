@@ -14,6 +14,9 @@
         <member name="P:ConstructionApp.ViewModel.BaseViewModel.Title">
             <inheritdoc cref="F:ConstructionApp.ViewModel.BaseViewModel.title"/>
         </member>
+        <member name="P:ConstructionApp.ViewModel.BaseViewModel.IsRefreshing">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.BaseViewModel.isRefreshing"/>
+        </member>
         <member name="F:ConstructionApp.ViewModel.BaseViewModel.logoutCommand">
             <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.BaseViewModel.LogoutCommand"/>.</summary>
         </member>
@@ -25,9 +28,6 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
-        </member>
-        <member name="P:ConstructionApp.ViewModel.HomeViewModel.IsRefreshing">
-            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel.isRefreshing"/>
         </member>
         <member name="P:ConstructionApp.ViewModel.HomeViewModel.Owner">
             <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel.owner"/>
@@ -65,22 +65,6 @@
         </member>
         <member name="P:ConstructionApp.ViewModel.LoginViewModel.LoginCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.LoginViewModel.Login"/>.</summary>
-        </member>
-        <member name="T:ConstructionApp.ViewModel.MainViewModel">
-            <inheritdoc/>
-            <inheritdoc/>
-        </member>
-        <member name="P:ConstructionApp.ViewModel.MainViewModel.IsRefreshing">
-            <inheritdoc cref="F:ConstructionApp.ViewModel.MainViewModel.isRefreshing"/>
-        </member>
-        <member name="P:ConstructionApp.ViewModel.MainViewModel.Owner">
-            <inheritdoc cref="F:ConstructionApp.ViewModel.MainViewModel.owner"/>
-        </member>
-        <member name="F:ConstructionApp.ViewModel.MainViewModel.getPhotosCommand">
-            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.MainViewModel.GetPhotosCommand"/>.</summary>
-        </member>
-        <member name="P:ConstructionApp.ViewModel.MainViewModel.GetPhotosCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.MainViewModel.GetPhotosAsync"/>.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
             <summary>
