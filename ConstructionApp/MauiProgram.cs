@@ -23,12 +23,10 @@ public static class MauiProgram
         builder.Services.AddSingleton<IPhotoDataService, PhotoDataService>();
 
         builder.Services.AddTransient<LoginPage>();
-        builder.Services.AddSingleton<HomePage>();
-        builder.Services.AddSingleton<MainPage>();
+        builder.Services.AddTransient<HomePage>();
 
-        builder.Services.AddSingleton<HomeViewModel>();
-        builder.Services.AddSingleton<LoginViewModel>();
-        builder.Services.AddSingleton<MainViewModel>();
+        builder.Services.AddTransient<HomeViewModel>();
+        builder.Services.AddTransient<LoginViewModel>();
 
         return builder.Build();
     }

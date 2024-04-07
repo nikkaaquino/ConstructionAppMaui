@@ -3,8 +3,7 @@
     public partial class HomeViewModel : BaseViewModel
     {
         public ObservableCollection<PhotoModel> Photos { get; } = new();
-        [ObservableProperty]
-        bool isRefreshing;
+        
         [ObservableProperty]
         string owner = "user";
 
@@ -83,8 +82,12 @@
         [RelayCommand]
         async Task CapturePhoto()
         {
+            if (IsBusy)
+                return;
+
             try
             {
+                IsBusy = true;
                 var photo = await MediaPicker.CapturePhotoAsync();
                 CompletePhotoPath = await LoadPhotoAsync(photo);
                 await Shell.Current.DisplayAlert("Information", "Successfully added!", "OK");
@@ -95,6 +98,11 @@
             {
                 Debug.WriteLine($"Unable to capture photo: {ex.Message}");
                 await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+            }
+            finally
+            {
+                IsBusy = false;
+                IsRefreshing = false;
             }
         }
 
