@@ -5,6 +5,7 @@
         private readonly HttpClient _httpClient;
         private readonly string _url;
         private readonly JsonSerializerOptions _jsonSerializeOptions;
+        ErrorMessage _error;
 
         List<PhotoModel> _photos;
 
@@ -26,9 +27,6 @@
 
         public async Task<List<PhotoModel>> GetAllPhotosAsync(string username)
         {
-            //if (_photos?.Count > 0)
-            //    return _photos;
-
             var response = await _httpClient.GetAsync($"{_url}/image/image-list?UserId={username}");
             if (response.IsSuccessStatusCode)
             {
@@ -42,11 +40,6 @@
 
         public async Task AddPhotoAsync(PhotoModel model)
         {
-            if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
-            {
-                Debug.WriteLine("----> No Internet Access ....");
-                return;
-            }
             try
             {
                 string jsonPhoto = JsonSerializer.Serialize<PhotoModel>(model, _jsonSerializeOptions);
@@ -59,9 +52,10 @@
                 }
                 else
                 {
-                    Debug.WriteLine("---> Non Http 2xx response");
+                    throw new Exception(_error.Errors);
                 }
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 Debug.WriteLine($"Oops exception: {ex.Message}");
             }

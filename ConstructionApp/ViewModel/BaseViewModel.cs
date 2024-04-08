@@ -1,25 +1,32 @@
-﻿namespace ConstructionApp.ViewModel
+﻿using Microsoft.Maui.Devices.Sensors;
+
+namespace ConstructionApp.ViewModel
 {
     public partial class BaseViewModel : ObservableObject
     {
-
         [ObservableProperty]
         [NotifyPropertyChangedFor(nameof(IsNotBusy))]
         bool isBusy;
 
         [ObservableProperty]
-        string title;
+        string owner;
 
         [ObservableProperty]
         bool isRefreshing;
 
-        public bool IsNotBusy => IsBusy;       
+        public bool IsNotBusy => IsBusy;
+
 
         [RelayCommand]
         static async Task Logout()
         {
-            await Shell.Current.GoToAsync("//LoginPage");
+            bool answer = await Shell.Current.DisplayAlert("Information", "Are you sure you want to logut?", "Yes", "No");
+            if (answer == true)
+            {
+                await Shell.Current.GoToAsync("//LoginPage");
+            }
 
         }
+
     }
 }

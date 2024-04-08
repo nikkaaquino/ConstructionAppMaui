@@ -10,15 +10,22 @@ namespace ConstructionApp.ViewModel
         private string _password;
 
         ILoginDataService loginService;
+        IConnectivity connectivity;
 
-        public LoginViewModel(ILoginDataService loginService)
+        public LoginViewModel(ILoginDataService loginService, IConnectivity connectivity)
         {
             this.loginService = loginService;
+            this.connectivity = connectivity;
         }
 
         [RelayCommand]
         async Task Login()
         {
+            if (connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                await Shell.Current.DisplayAlert("No Connectivity",
+                    $"Please check internet and try again.", "Ok");
+            }
             if (IsBusy)
                 return;
 
@@ -28,10 +35,9 @@ namespace ConstructionApp.ViewModel
                 LoginModel userinfo = await loginService.LoginUser(Username, Password);
                 if (userinfo != null)
                 {
+                    await Shell.Current.GoToAsync($"{nameof(HomePage)}?Owner={Username}");
                     Username = string.Empty;
                     Password = string.Empty;
-
-                    await Shell.Current.GoToAsync(nameof(HomePage));
                 }
             }
             catch(Exception ex) {
@@ -42,7 +48,7 @@ namespace ConstructionApp.ViewModel
             {
                 IsBusy = false;
                 IsRefreshing = false;
-            }         
+            }       
            
 
         }

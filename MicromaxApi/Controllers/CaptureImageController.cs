@@ -53,11 +53,7 @@ namespace MicromaxApi.Controllers
             if (ModelState.IsValid)
             {
                 var result = _imageService.SaveImages(model);
-                if (!_imageService.IsValid)
-                {
-                    return BadRequest(_imageService.Validation);
-                }
-                else
+                if (_imageService.IsValid)
                 {
                     var response = new ApiResponse<Task<bool>>
                     {
@@ -65,6 +61,10 @@ namespace MicromaxApi.Controllers
                     };
 
                     return Ok(response);
+                }
+                else
+                {
+                    return BadRequest(_imageService.Validation);
                 }
             }
             else
