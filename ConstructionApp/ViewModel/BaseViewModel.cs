@@ -20,7 +20,7 @@ namespace ConstructionApp.ViewModel
         [RelayCommand]
         static async Task Logout()
         {
-            bool answer = await Shell.Current.DisplayAlert("Information", "Are you sure you want to logut?", "Yes", "No");
+            bool answer = await Shell.Current.DisplayAlert("Information", "Are you sure you want to logout?", "Yes", "No");
             if (answer == true)
             {
                 await Shell.Current.GoToAsync("//LoginPage");

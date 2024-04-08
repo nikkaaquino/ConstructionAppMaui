@@ -33,8 +33,8 @@
                                             VerticalOptions="Center"
                                             Grid.Column="1"
                                             Padding="10">
-                                    <Label Style="{StaticResource LargeLabel}" Text="{Binding ImageName}" />
-                                    <Label Style="{StaticResource MediumLabel}" Text="{Binding Location}" />
+                                    <Label Style="{StaticResource MediumLabel}" Text="{Binding ImageName}" />
+                                    <Label Style="{StaticResource SmallLabel}" Text="{Binding Location}" />
                                 </VerticalStackLayout>
                             </Grid>
                         </Frame>

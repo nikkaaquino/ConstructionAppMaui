@@ -147,7 +147,7 @@
                 };
 
                 await photoDataService.AddPhotoAsync(addPhoto);
-                
+
             }
             catch (Exception ex)
             {
@@ -163,7 +163,20 @@
 
                 if (placemark != null)
                 {
-                    return
+                    return ($"{placemark.Locality},{placemark.SubAdminArea},{placemark.AdminArea}, {placemark.CountryName}");
+
+                    /*
+                AdminArea: Calabarzon
+                CountryCode:     PH
+                CountryName:     Philippines
+                FeatureName:     CXP3 + 65R
+                Locality:        Bacoor
+                PostalCode:      
+                SubAdminArea: Cavite
+                SubLocality:     
+                SubThoroughfare:
+            Thoroughfare:
+                return
                         $"AdminArea:       {placemark.AdminArea}\n" +
                         $"CountryCode:     {placemark.CountryCode}\n" +
                         $"CountryName:     {placemark.CountryName}\n" +
@@ -173,7 +186,7 @@
                         $"SubAdminArea:    {placemark.SubAdminArea}\n" +
                         $"SubLocality:     {placemark.SubLocality}\n" +
                         $"SubThoroughfare: {placemark.SubThoroughfare}\n" +
-                        $"Thoroughfare:    {placemark.Thoroughfare}\n";
+                        $"Thoroughfare:    {placemark.Thoroughfare}\n";*/
                 }
 
                 return "";
