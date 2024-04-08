@@ -320,7 +320,6 @@ C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\obj\Debug\net
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\ios-arm64\ConstructionApp.runtimeconfig.json
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\ios-arm64\ConstructionApp.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\ios-arm64\ConstructionApp.pdb
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\ios-arm64\Camera.MAUI.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\ios-arm64\CommunityToolkit.Mvvm.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\ios-arm64\Microsoft.Extensions.Configuration.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\ios-arm64\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -333,7 +332,7 @@ C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\ios-arm64\Microsoft.Extensions.Primitives.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\ios-arm64\Microsoft.Maui.Graphics.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\ios-arm64\Microsoft.Toolkit.Mvvm.dll
-C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\ios-arm64\zxing.dll
+C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\ios-arm64\Newtonsoft.Json.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\ios-arm64\Microsoft.CSharp.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\ios-arm64\Microsoft.VisualBasic.Core.dll
 C:\Users\user\Documents\GitHub\ConstructionAppMaui\ConstructionApp\bin\Debug\net7.0-ios\ios-arm64\Microsoft.VisualBasic.dll

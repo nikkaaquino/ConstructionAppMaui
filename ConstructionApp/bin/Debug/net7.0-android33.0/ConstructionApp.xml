@@ -50,8 +50,8 @@
         <member name="P:ConstructionApp.ViewModel.BaseViewModel.IsBusy">
             <inheritdoc cref="F:ConstructionApp.ViewModel.BaseViewModel.isBusy"/>
         </member>
-        <member name="P:ConstructionApp.ViewModel.BaseViewModel.Title">
-            <inheritdoc cref="F:ConstructionApp.ViewModel.BaseViewModel.title"/>
+        <member name="P:ConstructionApp.ViewModel.BaseViewModel.Owner">
+            <inheritdoc cref="F:ConstructionApp.ViewModel.BaseViewModel.owner"/>
         </member>
         <member name="P:ConstructionApp.ViewModel.BaseViewModel.IsRefreshing">
             <inheritdoc cref="F:ConstructionApp.ViewModel.BaseViewModel.isRefreshing"/>
@@ -68,14 +68,17 @@
             <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="P:ConstructionApp.ViewModel.HomeViewModel.Owner">
-            <inheritdoc cref="F:ConstructionApp.ViewModel.HomeViewModel.owner"/>
-        </member>
         <member name="F:ConstructionApp.ViewModel.HomeViewModel.getPhotosCommand">
             <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.HomeViewModel.GetPhotosCommand"/>.</summary>
         </member>
         <member name="P:ConstructionApp.ViewModel.HomeViewModel.GetPhotosCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.HomeViewModel.GetPhotosAsync"/>.</summary>
+        </member>
+        <member name="F:ConstructionApp.ViewModel.HomeViewModel.appearingCommand">
+            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.HomeViewModel.AppearingCommand"/>.</summary>
+        </member>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.AppearingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.HomeViewModel.Appearing"/>.</summary>
         </member>
         <member name="F:ConstructionApp.ViewModel.HomeViewModel.capturePhotoCommand">
             <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.HomeViewModel.CapturePhotoCommand"/>.</summary>
@@ -83,11 +86,11 @@
         <member name="P:ConstructionApp.ViewModel.HomeViewModel.CapturePhotoCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.HomeViewModel.CapturePhoto"/>.</summary>
         </member>
-        <member name="F:ConstructionApp.ViewModel.HomeViewModel.loadPhotoCommand">
-            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.HomeViewModel.LoadPhotoCommand"/>.</summary>
+        <member name="F:ConstructionApp.ViewModel.HomeViewModel.savePhotoCommand">
+            <summary>The backing field for <see cref="P:ConstructionApp.ViewModel.HomeViewModel.SavePhotoCommand"/>.</summary>
         </member>
-        <member name="P:ConstructionApp.ViewModel.HomeViewModel.LoadPhotoCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.HomeViewModel.LoadPhotoAsync(Microsoft.Maui.Storage.FileResult)"/>.</summary>
+        <member name="P:ConstructionApp.ViewModel.HomeViewModel.SavePhotoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:ConstructionApp.ViewModel.HomeViewModel.SavePhotoAsync(Microsoft.Maui.Storage.FileResult)"/>.</summary>
         </member>
         <member name="T:ConstructionApp.ViewModel.LoginViewModel">
             <inheritdoc/>
@@ -114,14 +117,11 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Owner">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Owner" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsRefreshing">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Owner">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Owner" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Username">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Username" generated properties.</summary>
@@ -141,14 +141,11 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsNotBusy">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsNotBusy" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Owner">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Owner" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsRefreshing">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Owner">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Owner" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Username">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Username" generated properties.</summary>

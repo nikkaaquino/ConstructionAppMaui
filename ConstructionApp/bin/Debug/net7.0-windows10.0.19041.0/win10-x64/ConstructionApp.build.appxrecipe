@@ -607,17 +607,8 @@
     <AppxPackagedFile Include="C:\Users\user\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\user\.nuget\packages\camera.maui\1.4.4\lib\net7.0-windows10.0.19041\Camera.MAUI.dll">
-      <PackagePath>Camera.MAUI.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\user\.nuget\packages\communitytoolkit.mvvm\8.2.1\lib\net6.0\CommunityToolkit.Mvvm.dll">
       <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\user\.nuget\packages\flurl\4.0.0\lib\netstandard2.0\Flurl.dll">
-      <PackagePath>Flurl.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\user\.nuget\packages\flurl.http\4.0.2\lib\net6.0\Flurl.Http.dll">
-      <PackagePath>Flurl.Http.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\user\.nuget\packages\microsoft.extensions.configuration\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
@@ -702,9 +693,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\user\.nuget\packages\newtonsoft.json\13.0.3\lib\net6.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\user\.nuget\packages\zxing.net\0.16.9\lib\net7.0\zxing.dll">
-      <PackagePath>zxing.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\user\.nuget\packages\microsoft.graphics.win2d\1.0.5.1\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>

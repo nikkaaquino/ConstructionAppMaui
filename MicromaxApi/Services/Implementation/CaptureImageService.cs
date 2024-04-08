@@ -59,18 +59,14 @@ namespace MicromaxApi.Services.Implementation
                     ImagePath = model.ImagePath,
                 };
 
-                var isSaved = await _repo.SaveImages(saveEntity);
-                if (!isSaved)
-                {
-                    Validation.Add("errors", "Something went wrong. Please try again in a while");
-                }
+                 await _repo.SaveImages(saveEntity);
 
-                return isSaved;
+                return true;
             }
             catch (Exception ex)
             {
                 Validation.Add("errors", ex.Message);
-                return false;
+                throw;
             }
         }
     }

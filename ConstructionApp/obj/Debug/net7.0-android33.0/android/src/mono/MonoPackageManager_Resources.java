@@ -8,10 +8,7 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Maui.Controls.Xaml.dll",
 		"Microsoft.Maui.Controls.dll",
 		"Microsoft.Maui.Essentials.dll",
-		"Camera.MAUI.dll",
 		"CommunityToolkit.Mvvm.dll",
-		"Flurl.dll",
-		"Flurl.Http.dll",
 		"GoogleGson.dll",
 		"Microsoft.Extensions.Configuration.dll",
 		"Microsoft.Extensions.Configuration.Abstractions.dll",
@@ -106,7 +103,6 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Kotlin.StdLib.Jdk8.dll",
 		"Xamarin.KotlinX.Coroutines.Android.dll",
 		"Xamarin.KotlinX.Coroutines.Core.Jvm.dll",
-		"zxing.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

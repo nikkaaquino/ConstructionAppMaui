@@ -1,6 +1,4 @@
-﻿using ConstructionApp.Services.Interface;
-
-namespace ConstructionApp;
+﻿namespace ConstructionApp;
 
 public static class MauiProgram
 {
@@ -9,7 +7,6 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
-            .UseMauiCameraView()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

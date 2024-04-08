@@ -1,42 +1,18 @@
 ﻿namespace ConstructionApp.ViewModel
 {
+    [QueryProperty("Owner", "Owner")]
     public partial class HomeViewModel : BaseViewModel
     {
         public ObservableCollection<PhotoModel> Photos { get; } = new();
 
-        [ObservableProperty]
-        string owner = "user";
-
-        private string photoPath;
-
-        public string CompletePhotoPath
-        {
-            get => photoPath;
-            set
-            {
-                SetProperty(ref photoPath, value);
-                HasPhoto = !string.IsNullOrEmpty(value);
-            }
-        }
-
-        private bool _hasPhoto;
-        public bool HasPhoto
-        {
-            get => _hasPhoto;
-            set => SetProperty(ref _hasPhoto, value);
-
-        }
-
         IPhotoDataService photoDataService;
-        ILoginDataService loginDataService;
         IConnectivity connectivity;
         IGeolocation geolocation;
         IMap map;
 
-        public HomeViewModel(IPhotoDataService photoDataService, ILoginDataService loginDataService, IGeolocation geolocation, IMap map, IConnectivity connectivity)
+        public HomeViewModel(IPhotoDataService photoDataService, IGeolocation geolocation, IMap map, IConnectivity connectivity)
         {
             this.photoDataService = photoDataService;
-            this.loginDataService = loginDataService;
             this.geolocation = geolocation;
             this.map = map;
             this.connectivity = connectivity;
@@ -65,6 +41,9 @@
                 foreach (var photo in photos)
                     Photos.Add(photo);
 
+                if (Photos.Count == 0)
+                    await Shell.Current.DisplayAlert("Information", "No Photos added yet, please click Capture Photo to proceed.", "Ok");
+
             }
             catch (Exception ex)
             {
@@ -80,6 +59,19 @@
         }
 
         [RelayCommand]
+        async Task Appearing()
+        {
+            try
+            {
+                await GetPhotosAsync();
+            }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+            }
+        }
+
+        [RelayCommand]
         async Task CapturePhoto()
         {
             if (IsBusy)
@@ -89,13 +81,14 @@
             {
                 IsBusy = true;
                 var photo = await MediaPicker.CapturePhotoAsync();
-                await LoadPhotoAsync(photo);
+                await SavePhotoAsync(photo);
                 await Shell.Current.DisplayAlert("Information", "Successfully added!", "OK");
             }
             catch (Exception ex)
             {
                 Debug.WriteLine($"Unable to capture photo: {ex.Message}");
                 await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+
             }
             finally
             {
@@ -105,10 +98,10 @@
         }
 
         [RelayCommand]
-        public async Task LoadPhotoAsync(FileResult photo)
+        public async Task SavePhotoAsync(FileResult photo)
         {
-            try {
-
+            try
+            {
                 var stream = photo.OpenReadAsync().Result;
 
                 byte[] imagedata;
@@ -119,15 +112,15 @@
                     imagedata = ms.ToArray();
                 }
 
+                var empfilename = Guid.NewGuid() + "_photo.jpg";
+
                 var location = await geolocation.GetLocationAsync(new GeolocationRequest
                 {
                     DesiredAccuracy = GeolocationAccuracy.Medium,
                     Timeout = TimeSpan.FromSeconds(30)
                 });
 
-                var empfilename = Guid.NewGuid() + "_photo.jpg";
-
-
+                var curlocation = await GetGeocodeReverseData(location.Latitude, location.Longitude);
 
                 var folderpath = Path.Combine(FileSystem.AppDataDirectory, "Photo");
                 if (!File.Exists(folderpath))
@@ -147,22 +140,45 @@
                 {
                     ImageName = empfilename,
                     ImageData = imagedata,
-                    Location = location.Latitude + "," + location.Longitude,
-                    User = "user", //change to current user
+                    Location = curlocation,
+                    User = Owner,
                     ImageType = photo.ContentType,
                     ImagePath = newfile,
                 };
 
                 await photoDataService.AddPhotoAsync(addPhoto);
+                
             }
-            catch(Exception ex) {
+            catch (Exception ex)
+            {
                 Debug.WriteLine($"Unable to capture photo: {ex.Message}");
                 await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
-            }            
+            }
+
+            async Task<string> GetGeocodeReverseData(double latitude, double longitude)
+            {
+                IEnumerable<Placemark> placemarks = await Geocoding.Default.GetPlacemarksAsync(latitude, longitude);
+
+                Placemark placemark = placemarks?.FirstOrDefault();
+
+                if (placemark != null)
+                {
+                    return
+                        $"AdminArea:       {placemark.AdminArea}\n" +
+                        $"CountryCode:     {placemark.CountryCode}\n" +
+                        $"CountryName:     {placemark.CountryName}\n" +
+                        $"FeatureName:     {placemark.FeatureName}\n" +
+                        $"Locality:        {placemark.Locality}\n" +
+                        $"PostalCode:      {placemark.PostalCode}\n" +
+                        $"SubAdminArea:    {placemark.SubAdminArea}\n" +
+                        $"SubLocality:     {placemark.SubLocality}\n" +
+                        $"SubThoroughfare: {placemark.SubThoroughfare}\n" +
+                        $"Thoroughfare:    {placemark.Thoroughfare}\n";
+                }
+
+                return "";
+            }
 
         }
-
-
-
     }
 }

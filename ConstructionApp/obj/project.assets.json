@@ -2,22 +2,6 @@
   "version": 3,
   "targets": {
     "net7.0-android33.0": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-android33.0/Camera.MAUI.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/Camera.MAUI.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -32,35 +16,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "GoogleGson/2.9.1.1": {
@@ -2022,39 +1977,10 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
         }
       }
     },
     "net7.0-android33.0/android-arm": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-android33.0/Camera.MAUI.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/Camera.MAUI.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -2069,35 +1995,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "GoogleGson/2.9.1.1": {
@@ -4059,39 +3956,10 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
         }
       }
     },
     "net7.0-android33.0/android-arm64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-android33.0/Camera.MAUI.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/Camera.MAUI.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -4106,35 +3974,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "GoogleGson/2.9.1.1": {
@@ -6096,39 +5935,10 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
         }
       }
     },
     "net7.0-android33.0/android-x64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-android33.0/Camera.MAUI.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/Camera.MAUI.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -6143,35 +5953,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "GoogleGson/2.9.1.1": {
@@ -8133,39 +7914,10 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
         }
       }
     },
     "net7.0-android33.0/android-x86": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-android33.0/Camera.MAUI.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/Camera.MAUI.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -8180,35 +7932,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "GoogleGson/2.9.1.1": {
@@ -10170,39 +9893,10 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
         }
       }
     },
     "net7.0-android33.0/ios-arm64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-android33.0/Camera.MAUI.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/Camera.MAUI.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -10217,35 +9911,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "GoogleGson/2.9.1.1": {
@@ -12207,39 +11872,10 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
         }
       }
     },
     "net7.0-android33.0/maccatalyst-x64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-android33.0/Camera.MAUI.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/Camera.MAUI.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -12254,35 +11890,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "GoogleGson/2.9.1.1": {
@@ -14244,39 +13851,10 @@
         },
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
         }
       }
     },
     "net7.0-android33.0/win10-x64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-android33.0/Camera.MAUI.dll": {
-            "related": ".aar;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0-android33.0/Camera.MAUI.dll": {
-            "related": ".aar;.xml"
-          }
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -14291,35 +13869,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "GoogleGson/2.9.1.1": {
@@ -16282,34 +15831,9 @@
         "build": {
           "buildTransitive/net6.0-android31.0/Xamarin.KotlinX.Coroutines.Core.Jvm.targets": {}
         }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        }
       }
     },
     "net7.0-ios16.1": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-ios16.1/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-ios16.1/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -16324,35 +15848,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -16572,36 +16067,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-ios16.1/android-arm": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-ios16.1/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-ios16.1/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -16616,35 +16086,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -16864,36 +16305,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-ios16.1/android-arm64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-ios16.1/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-ios16.1/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -16908,35 +16324,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -17156,36 +16543,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-ios16.1/android-x64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-ios16.1/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-ios16.1/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -17200,35 +16562,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -17448,36 +16781,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-ios16.1/android-x86": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-ios16.1/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-ios16.1/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -17492,35 +16800,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -17740,36 +17019,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-ios16.1/ios-arm64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-ios16.1/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-ios16.1/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -17784,35 +17038,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -18032,36 +17257,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-ios16.1/maccatalyst-x64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-ios16.1/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-ios16.1/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -18076,35 +17276,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -18324,36 +17495,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-ios16.1/win10-x64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-ios16.1/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-ios16.1/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -18368,35 +17514,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -18616,36 +17733,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-maccatalyst16.1": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -18660,35 +17752,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -18908,36 +17971,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-maccatalyst16.1/android-arm": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -18952,35 +17990,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -19200,36 +18209,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-maccatalyst16.1/android-arm64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -19244,35 +18228,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -19492,36 +18447,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-maccatalyst16.1/android-x64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -19536,35 +18466,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -19784,36 +18685,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-maccatalyst16.1/android-x86": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -19828,35 +18704,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -20076,36 +18923,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-maccatalyst16.1/ios-arm64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -20120,35 +18942,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -20368,36 +19161,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-maccatalyst16.1/maccatalyst-x64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -20412,35 +19180,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -20660,36 +19399,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-maccatalyst16.1/win10-x64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -20704,35 +19418,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -20954,34 +19639,9 @@
             "related": ".xml"
           }
         }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        }
       }
     },
     "net7.0-windows10.0.19041": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-windows10.0.19041/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-windows10.0.19041/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -20996,35 +19656,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -21373,34 +20004,9 @@
             "related": ".xml"
           }
         }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        }
       }
     },
     "net7.0-windows10.0.19041/android-arm": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-windows10.0.19041/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-windows10.0.19041/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -21415,35 +20021,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -21762,36 +20339,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-windows10.0.19041/android-arm64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-windows10.0.19041/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-windows10.0.19041/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -21806,35 +20358,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -22153,36 +20676,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-windows10.0.19041/android-x64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-windows10.0.19041/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-windows10.0.19041/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -22197,35 +20695,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -22544,36 +21013,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-windows10.0.19041/android-x86": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-windows10.0.19041/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-windows10.0.19041/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -22588,35 +21032,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -22935,36 +21350,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-windows10.0.19041/ios-arm64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-windows10.0.19041/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-windows10.0.19041/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -22979,35 +21369,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -23326,36 +21687,11 @@
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
           }
         }
       }
     },
     "net7.0-windows10.0.19041/maccatalyst-x64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-windows10.0.19041/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-windows10.0.19041/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -23370,35 +21706,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -23719,34 +22026,9 @@
             "related": ".xml"
           }
         }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        }
       }
     },
     "net7.0-windows10.0.19041/win10-x64": {
-      "Camera.MAUI/1.4.4": {
-        "type": "package",
-        "dependencies": {
-          "ZXing.Net": "0.16.9"
-        },
-        "compile": {
-          "lib/net7.0-windows10.0.19041/Camera.MAUI.dll": {}
-        },
-        "runtime": {
-          "lib/net7.0-windows10.0.19041/Camera.MAUI.dll": {}
-        }
-      },
       "CommunityToolkit.Mvvm/8.2.1": {
         "type": "package",
         "compile": {
@@ -23761,35 +22043,6 @@
         },
         "build": {
           "buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets": {}
-        }
-      },
-      "Flurl/4.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Flurl.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Flurl.Http/4.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Flurl": "4.0.0"
-        },
-        "compile": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Flurl.Http.dll": {
-            "related": ".xml"
-          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -24116,43 +22369,10 @@
             "related": ".xml"
           }
         }
-      },
-      "ZXing.Net/0.16.9": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/zxing.dll": {
-            "related": ".XML"
-          }
-        }
       }
     }
   },
   "libraries": {
-    "Camera.MAUI/1.4.4": {
-      "sha512": "hsCdEVRXR7hzESvOHOxQJkiJxxd6/j/daHekhQVzQAZFlzuKkN1ncDxXNG5tXyutX6VaCzYLZiA7rSvqtCZT9w==",
-      "type": "package",
-      "path": "camera.maui/1.4.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Readme.md",
-        "camera.maui.1.4.4.nupkg.sha512",
-        "camera.maui.nuspec",
-        "camera.maui.png",
-        "lib/net7.0-android33.0/Camera.MAUI.aar",
-        "lib/net7.0-android33.0/Camera.MAUI.dll",
-        "lib/net7.0-android33.0/Camera.MAUI.xml",
-        "lib/net7.0-ios16.1/Camera.MAUI.dll",
-        "lib/net7.0-maccatalyst16.1/Camera.MAUI.dll",
-        "lib/net7.0-windows10.0.19041/Camera.MAUI.dll",
-        "lib/net7.0/Camera.MAUI.dll"
-      ]
-    },
     "CommunityToolkit.Mvvm/8.2.1": {
       "sha512": "I24ofWVEdplxYjUez9/bljv/qb8r8Ccj6cvYXHexNBegLaD3iDy3QrzAAOYVMmfGWIXxlU1ZtECQNfU07+6hXQ==",
       "type": "package",
@@ -24182,43 +22402,6 @@
         "lib/netstandard2.1/CommunityToolkit.Mvvm.dll",
         "lib/netstandard2.1/CommunityToolkit.Mvvm.pdb",
         "lib/netstandard2.1/CommunityToolkit.Mvvm.xml"
-      ]
-    },
-    "Flurl/4.0.0": {
-      "sha512": "rpts69yYgvJqg6PPgqShBQEZ4aNzWQqWpWppcT0oDWxDCIsBqiod4pj6LQZdhk+1OozLFagemldMRACdHF3CsA==",
-      "type": "package",
-      "path": "flurl/4.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "flurl.4.0.0.nupkg.sha512",
-        "flurl.nuspec",
-        "icon.png",
-        "lib/net461/Flurl.dll",
-        "lib/net461/Flurl.xml",
-        "lib/net472/Flurl.dll",
-        "lib/net472/Flurl.xml",
-        "lib/netstandard2.0/Flurl.dll",
-        "lib/netstandard2.0/Flurl.xml"
-      ]
-    },
-    "Flurl.Http/4.0.2": {
-      "sha512": "9vCqFFyceA11yplkFD8AbCFFTvG1Lrw3tpsgOpL5sLUc28p6zcvGszNleuT6nDymRvtt5eS+rqUX+bRztg1fhA==",
-      "type": "package",
-      "path": "flurl.http/4.0.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "flurl.http.4.0.2.nupkg.sha512",
-        "flurl.http.nuspec",
-        "icon.png",
-        "lib/net461/Flurl.Http.dll",
-        "lib/net461/Flurl.Http.xml",
-        "lib/net6.0/Flurl.Http.dll",
-        "lib/net6.0/Flurl.Http.xml",
-        "lib/netstandard2.0/Flurl.Http.dll",
-        "lib/netstandard2.0/Flurl.Http.xml"
       ]
     },
     "GoogleGson/2.9.1.1": {
@@ -27555,97 +25738,11 @@
         "xamarin.kotlinx.coroutines.core.jvm.1.6.4.1.nupkg.sha512",
         "xamarin.kotlinx.coroutines.core.jvm.nuspec"
       ]
-    },
-    "ZXing.Net/0.16.9": {
-      "sha512": "7WaVMHklpT3Ye2ragqRIwlFRsb6kOk63BOGADV0fan3ulVfGLUYkDi5yNUsZS/7FVNkWbtHAlDLmu4WnHGfqvQ==",
-      "type": "package",
-      "path": "zxing.net/0.16.9",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/native/zxing.XML",
-        "lib/native/zxing.pri",
-        "lib/native/zxing.winmd",
-        "lib/net20-cf/zxing.ce2.0.dll",
-        "lib/net20-cf/zxing.ce2.0.xml",
-        "lib/net20/zxing.XML",
-        "lib/net20/zxing.dll",
-        "lib/net35-cf/zxing.ce3.5.dll",
-        "lib/net35-cf/zxing.ce3.5.xml",
-        "lib/net35/zxing.XML",
-        "lib/net35/zxing.dll",
-        "lib/net40/zxing.XML",
-        "lib/net40/zxing.dll",
-        "lib/net40/zxing.presentation.XML",
-        "lib/net40/zxing.presentation.dll",
-        "lib/net45/zxing.XML",
-        "lib/net45/zxing.dll",
-        "lib/net45/zxing.presentation.XML",
-        "lib/net45/zxing.presentation.dll",
-        "lib/net461/zxing.XML",
-        "lib/net461/zxing.dll",
-        "lib/net461/zxing.presentation.XML",
-        "lib/net461/zxing.presentation.dll",
-        "lib/net47/zxing.XML",
-        "lib/net47/zxing.dll",
-        "lib/net47/zxing.presentation.XML",
-        "lib/net47/zxing.presentation.dll",
-        "lib/net48/zxing.XML",
-        "lib/net48/zxing.dll",
-        "lib/net48/zxing.presentation.XML",
-        "lib/net48/zxing.presentation.dll",
-        "lib/net5.0/zxing.XML",
-        "lib/net5.0/zxing.dll",
-        "lib/net6.0/zxing.XML",
-        "lib/net6.0/zxing.dll",
-        "lib/net7.0/zxing.XML",
-        "lib/net7.0/zxing.dll",
-        "lib/netcoreapp3.0/zxing.dll",
-        "lib/netcoreapp3.0/zxing.xml",
-        "lib/netcoreapp3.1/zxing.dll",
-        "lib/netcoreapp3.1/zxing.xml",
-        "lib/netstandard1.0/zxing.dll",
-        "lib/netstandard1.0/zxing.xml",
-        "lib/netstandard1.1/zxing.dll",
-        "lib/netstandard1.1/zxing.xml",
-        "lib/netstandard1.3/zxing.dll",
-        "lib/netstandard1.3/zxing.xml",
-        "lib/netstandard2.0/zxing.dll",
-        "lib/netstandard2.0/zxing.xml",
-        "lib/netstandard2.1/zxing.dll",
-        "lib/netstandard2.1/zxing.xml",
-        "lib/portable-win+net40+sl4+sl5+wp7+wp71+wp8/zxing.portable.XML",
-        "lib/portable-win+net40+sl4+sl5+wp7+wp71+wp8/zxing.portable.dll",
-        "lib/sl3-wp/zxing.wp7.0.XML",
-        "lib/sl3-wp/zxing.wp7.0.dll",
-        "lib/sl4-wp71/zxing.wp7.1.XML",
-        "lib/sl4-wp71/zxing.wp7.1.dll",
-        "lib/sl4/zxing.sl4.XML",
-        "lib/sl4/zxing.sl4.dll",
-        "lib/sl5/zxing.sl5.XML",
-        "lib/sl5/zxing.sl5.dll",
-        "lib/uap10/zxing.dll",
-        "lib/uap10/zxing.pri",
-        "lib/uap10/zxing.xml",
-        "lib/windows8-managed/zxing.winrt.XML",
-        "lib/windows8-managed/zxing.winrt.dll",
-        "lib/windows8/zxing.XML",
-        "lib/windows8/zxing.pri",
-        "lib/windows8/zxing.winmd",
-        "lib/wp8/zxing.wp8.0.XML",
-        "lib/wp8/zxing.wp8.0.dll",
-        "logo.jpg",
-        "zxing.net.0.16.9.nupkg.sha512",
-        "zxing.net.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
     "net7.0-android33.0": [
-      "Camera.MAUI >= 1.4.4",
       "CommunityToolkit.Mvvm >= 8.2.1",
-      "Flurl >= 4.0.0",
-      "Flurl.Http >= 4.0.2",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Logging >= 7.0.0",
@@ -27668,10 +25765,7 @@
       "Xamarin.Google.Crypto.Tink.Android >= 1.7.0.1"
     ],
     "net7.0-ios16.1": [
-      "Camera.MAUI >= 1.4.4",
       "CommunityToolkit.Mvvm >= 8.2.1",
-      "Flurl >= 4.0.0",
-      "Flurl.Http >= 4.0.2",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Logging >= 7.0.0",
@@ -27683,10 +25777,7 @@
       "Newtonsoft.Json >= 13.0.3"
     ],
     "net7.0-maccatalyst16.1": [
-      "Camera.MAUI >= 1.4.4",
       "CommunityToolkit.Mvvm >= 8.2.1",
-      "Flurl >= 4.0.0",
-      "Flurl.Http >= 4.0.2",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Logging >= 7.0.0",
@@ -27698,10 +25789,7 @@
       "Newtonsoft.Json >= 13.0.3"
     ],
     "net7.0-windows10.0.19041": [
-      "Camera.MAUI >= 1.4.4",
       "CommunityToolkit.Mvvm >= 8.2.1",
-      "Flurl >= 4.0.0",
-      "Flurl.Http >= 4.0.2",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
       "Microsoft.Extensions.Logging >= 7.0.0",
@@ -27774,21 +25862,9 @@
       "net7.0-android33.0": {
         "targetAlias": "net7.0-android33.0",
         "dependencies": {
-          "Camera.MAUI": {
-            "target": "Package",
-            "version": "[1.4.4, )"
-          },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.2.1, )"
-          },
-          "Flurl": {
-            "target": "Package",
-            "version": "[4.0.0, )"
-          },
-          "Flurl.Http": {
-            "target": "Package",
-            "version": "[4.0.2, )"
           },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
@@ -27969,21 +26045,9 @@
       "net7.0-ios16.1": {
         "targetAlias": "net7.0-ios",
         "dependencies": {
-          "Camera.MAUI": {
-            "target": "Package",
-            "version": "[1.4.4, )"
-          },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.2.1, )"
-          },
-          "Flurl": {
-            "target": "Package",
-            "version": "[4.0.0, )"
-          },
-          "Flurl.Http": {
-            "target": "Package",
-            "version": "[4.0.2, )"
           },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
@@ -28097,21 +26161,9 @@
       "net7.0-maccatalyst16.1": {
         "targetAlias": "net7.0-maccatalyst",
         "dependencies": {
-          "Camera.MAUI": {
-            "target": "Package",
-            "version": "[1.4.4, )"
-          },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.2.1, )"
-          },
-          "Flurl": {
-            "target": "Package",
-            "version": "[4.0.0, )"
-          },
-          "Flurl.Http": {
-            "target": "Package",
-            "version": "[4.0.2, )"
           },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
@@ -28226,21 +26278,9 @@
       "net7.0-windows10.0.19041": {
         "targetAlias": "net7.0-windows10.0.19041.0",
         "dependencies": {
-          "Camera.MAUI": {
-            "target": "Package",
-            "version": "[1.4.4, )"
-          },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.2.1, )"
-          },
-          "Flurl": {
-            "target": "Package",
-            "version": "[4.0.0, )"
-          },
-          "Flurl.Http": {
-            "target": "Package",
-            "version": "[4.0.2, )"
           },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
